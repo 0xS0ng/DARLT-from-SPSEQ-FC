@@ -1,0 +1,1409 @@
+[
+  {
+    "case_id": "oauth-scope-delete",
+    "category": "ungranted_tool_or_resource",
+    "mode": "oauth",
+    "precondition": "Default agent grant excludes delete_record (native policy requires attribute 5).",
+    "attempted_operation": {
+      "tool": "delete_record",
+      "resource": "inventory/allowed"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "scope_not_granted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-scope-restricted",
+    "category": "ungranted_tool_or_resource",
+    "mode": "oauth",
+    "precondition": "Default agent grant excludes the restricted resource (native policy additionally requires attribute 4).",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "scope_not_granted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-attribute-4",
+    "category": "ungranted_or_private_attribute",
+    "mode": "oauth",
+    "precondition": "Agent attributes are 0,1,2,3; attribute 4 is not granted. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "attribute_not_granted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-private-attribute-6",
+    "category": "ungranted_or_private_attribute",
+    "mode": "oauth",
+    "precondition": "Attribute 6 is owner-private and absent from agent attributes. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "owner/private"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "attribute_not_granted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-stolen-without-agent-key",
+    "category": "stolen_material_without_agent_secret",
+    "mode": "oauth",
+    "precondition": "Stolen JWT excludes the legitimate DPoP private key.",
+    "attempted_operation": "Use the stolen access JWT with a newly generated DPoP key; retain the legitimate server nonce and target URI.",
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "DPoP_holder_key_binding",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "dpop_confirmation",
+    "atomicity_passed": true,
+    "request_sent": true
+  },
+  {
+    "case_id": "oauth-agent-budget-64-exhausted",
+    "category": "agent_budget_exhaustion",
+    "mode": "oauth",
+    "precondition": {
+      "accepted_requests": 15,
+      "accepted_units": 64,
+      "batch_requests": 7,
+      "single_requests": 8,
+      "schedule": "seven batch requests of 8 units, then eight single-unit searches",
+      "native_wallet_capacity": null,
+      "agent_limit": 64
+    },
+    "attempted_operation": "Request unit 65 after 64 successful units.",
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "quota_or_native_scope_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 15,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 0
+      },
+      "after": {
+        "effects": 15,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 0
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "quota_exhausted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-batch-mixed-resource",
+    "category": "batch_atomicity",
+    "mode": "oauth",
+    "precondition": "One batch has seven allowed-resource items and one restricted-resource item; its top-level resource is allowed.",
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "mixed-resource"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "scope_not_granted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-batch-remaining-under-eight",
+    "category": "batch_atomicity",
+    "mode": "oauth",
+    "precondition": {
+      "accepted_requests": 12,
+      "accepted_units": 61,
+      "batch_requests": 7,
+      "single_requests": 5,
+      "native_or_grant_capacity": 64,
+      "remaining_units": 3,
+      "no_synthetic_SMA_agent_quota": false
+    },
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "remaining-under-eight"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 12,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 3
+      },
+      "after": {
+        "effects": 12,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 3
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "rejection_reason": "quota_exhausted",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "oauth-batch-already-used-position",
+    "category": "batch_atomicity",
+    "mode": "oauth",
+    "precondition": "OAuth has no native unit-position coordinate.",
+    "attempted_operation": "Batch containing a previously consumed native position.",
+    "applicable": false,
+    "blocked": null,
+    "accepted_before_judge": [],
+    "classification": "not_applicable_no_native_unit_coordinates",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge"
+  },
+  {
+    "case_id": "oauth-double-use",
+    "category": "cross_verifier_double_use",
+    "mode": "oauth",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": null,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": true
+    },
+    "attempted_operation": "Send two freshly DPoP-signed requests using the same JWT to the same logical audience at two independent services.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "authenticated_subject_agent",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": 64
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": 64
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": 63
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": 63
+        }
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge",
+    "native_judge_executed": false,
+    "native_unit_judge_available": false,
+    "judge_key_matches_expected_identity": null,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "authenticated subject only; no native unit Judge"
+  },
+  {
+    "case_id": "oauth-overlap-second-agent",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "oauth",
+    "precondition": "An ordinary user has neither the AS signing key nor a native anonymous pool-delegation interface.",
+    "attempted_operation": "Allocate the same native pool to another agent.",
+    "applicable": false,
+    "blocked": null,
+    "accepted_before_judge": [],
+    "classification": "not_applicable_no_user_pool_delegation_interface",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge"
+  },
+  {
+    "case_id": "oauth-delegate-then-self",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "oauth",
+    "precondition": "An ordinary user has neither the AS signing key nor a native anonymous pool-delegation interface.",
+    "attempted_operation": "Delegate a pool and then self-allocate the same pool.",
+    "applicable": false,
+    "blocked": null,
+    "accepted_before_judge": [],
+    "classification": "not_applicable_no_user_pool_delegation_interface",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": 64
+      }
+    },
+    "protection_scope": "DPoP key binding and this service's authenticated scope, attribute and quota grant; no native unit coordinates or public unit Judge"
+  },
+  {
+    "case_id": "sma-scope-delete",
+    "category": "ungranted_tool_or_resource",
+    "mode": "sma",
+    "precondition": "Default agent grant excludes delete_record (native policy requires attribute 5).",
+    "attempted_operation": {
+      "tool": "delete_record",
+      "resource": "inventory/allowed"
+    },
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "accepted_with_original_shared_wallet_authority",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-scope-restricted",
+    "category": "ungranted_tool_or_resource",
+    "mode": "sma",
+    "precondition": "Default agent grant excludes the restricted resource (native policy additionally requires attribute 4).",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "accepted_with_original_shared_wallet_authority",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-attribute-4",
+    "category": "ungranted_or_private_attribute",
+    "mode": "sma",
+    "precondition": "Agent attributes are 0,1,2,3; attribute 4 is not granted. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "accepted_with_original_shared_wallet_authority",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-private-attribute-6",
+    "category": "ungranted_or_private_attribute",
+    "mode": "sma",
+    "precondition": "Attribute 6 is owner-private and absent from agent attributes. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "owner/private"
+    },
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "accepted_with_original_shared_wallet_authority",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-stolen-without-agent-key",
+    "category": "stolen_material_without_agent_secret",
+    "mode": "sma",
+    "precondition": "The stolen shared original wallet includes its native user witness; this scheme has no distinct agent secret.",
+    "attempted_operation": "Generate and send a real native request as the stolen shared-wallet actor.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "shared_wallet_contains_original_user_witness",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true,
+    "request_sent": true
+  },
+  {
+    "case_id": "sma-agent-budget-64-exhausted",
+    "category": "agent_budget_exhaustion",
+    "mode": "sma",
+    "precondition": {
+      "accepted_requests": 15,
+      "accepted_units": 64,
+      "batch_requests": 7,
+      "single_requests": 8,
+      "schedule": "seven batch requests of 8 units, then eight single-unit searches",
+      "native_wallet_capacity": 1024,
+      "agent_limit": null
+    },
+    "attempted_operation": "Request unit 65 after 64 successful units.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "no_native_agent_quota_in_shared_1024_wallet",
+    "effects_before_after": {
+      "before": {
+        "effects": 15,
+        "bookings": 0,
+        "consumed": 64,
+        "remaining": null
+      },
+      "after": {
+        "effects": 16,
+        "bookings": 0,
+        "consumed": 65,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-batch-mixed-resource",
+    "category": "batch_atomicity",
+    "mode": "sma",
+    "precondition": "One batch has seven allowed-resource items and one restricted-resource item; its top-level resource is allowed.",
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "mixed-resource"
+    },
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true
+    ],
+    "classification": "entire_batch_accepted",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 8,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": null,
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-batch-remaining-under-eight",
+    "category": "batch_atomicity",
+    "mode": "sma",
+    "precondition": {
+      "accepted_requests": 132,
+      "accepted_units": 1021,
+      "batch_requests": 127,
+      "single_requests": 5,
+      "native_or_grant_capacity": 1024,
+      "remaining_units": 3,
+      "no_synthetic_SMA_agent_quota": true
+    },
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "remaining-under-eight"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 132,
+        "bookings": 0,
+        "consumed": 1021,
+        "remaining": null
+      },
+      "after": {
+        "effects": 132,
+        "bookings": 0,
+        "consumed": 1021,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-batch-already-used-position",
+    "category": "batch_atomicity",
+    "mode": "sma",
+    "precondition": "Position 0 was accepted at this service; positions 1..7 remain unused.",
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "already-used-position"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "rejection_reason": "serial_or_dpop_replay",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "sma-double-use",
+    "category": "cross_verifier_double_use",
+    "mode": "sma",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "user",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "user only; cannot distinguish shared-wallet actors"
+  },
+  {
+    "case_id": "sma-overlap-second-agent",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "sma",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false,
+      "actor": "second",
+      "owner_state_fork": false,
+      "shared_original_wallet_copy": true
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "user",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "user only; cannot distinguish shared-wallet actors"
+  },
+  {
+    "case_id": "sma-delegate-then-self",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "sma",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false,
+      "actor": "user",
+      "owner_state_fork": false,
+      "shared_original_wallet_copy": true
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "user",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Original shared user wallet and its 1024 native units; no agent key, agent-only attributes or native agent quota; Identify names the user",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "user only; cannot distinguish shared-wallet actors"
+  },
+  {
+    "case_id": "darlt-scope-delete",
+    "category": "ungranted_tool_or_resource",
+    "mode": "darlt",
+    "precondition": "Default agent grant excludes delete_record (native policy requires attribute 5).",
+    "attempted_operation": {
+      "tool": "delete_record",
+      "resource": "inventory/allowed"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-scope-restricted",
+    "category": "ungranted_tool_or_resource",
+    "mode": "darlt",
+    "precondition": "Default agent grant excludes the restricted resource (native policy additionally requires attribute 4).",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-attribute-4",
+    "category": "ungranted_or_private_attribute",
+    "mode": "darlt",
+    "precondition": "Agent attributes are 0,1,2,3; attribute 4 is not granted. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "inventory/restricted"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-private-attribute-6",
+    "category": "ungranted_or_private_attribute",
+    "mode": "darlt",
+    "precondition": "Attribute 6 is owner-private and absent from agent attributes. OAuth resource scope is included to isolate the attribute gate.",
+    "attempted_operation": {
+      "tool": "get_details",
+      "resource": "owner/private"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "authorization_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-stolen-without-agent-key",
+    "category": "stolen_material_without_agent_secret",
+    "mode": "darlt",
+    "precondition": "Delegated delivery and public material are stolen without agentSK; inability to receive prevents construction of a valid request.",
+    "attempted_operation": "Run native receive on the authentic delegated delivery using a fresh incorrect recipient secret.",
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [],
+    "classification": "native_receive_recipient_key_binding",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "recipient_secret_mismatch",
+    "atomicity_passed": true,
+    "request_sent": false
+  },
+  {
+    "case_id": "darlt-agent-budget-64-exhausted",
+    "category": "agent_budget_exhaustion",
+    "mode": "darlt",
+    "precondition": {
+      "accepted_requests": 15,
+      "accepted_units": 64,
+      "batch_requests": 7,
+      "single_requests": 8,
+      "schedule": "seven batch requests of 8 units, then eight single-unit searches",
+      "native_wallet_capacity": null,
+      "agent_limit": 64
+    },
+    "attempted_operation": "Request unit 65 after 64 successful units.",
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "quota_or_native_scope_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 15,
+        "bookings": 0,
+        "consumed": 64,
+        "remaining": null
+      },
+      "after": {
+        "effects": 15,
+        "bookings": 0,
+        "consumed": 64,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-batch-mixed-resource",
+    "category": "batch_atomicity",
+    "mode": "darlt",
+    "precondition": "One batch has seven allowed-resource items and one restricted-resource item; its top-level resource is allowed.",
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "mixed-resource"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      },
+      "after": {
+        "effects": 0,
+        "bookings": 0,
+        "consumed": 0,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-batch-remaining-under-eight",
+    "category": "batch_atomicity",
+    "mode": "darlt",
+    "precondition": {
+      "accepted_requests": 12,
+      "accepted_units": 61,
+      "batch_requests": 7,
+      "single_requests": 5,
+      "native_or_grant_capacity": 64,
+      "remaining_units": 3,
+      "no_synthetic_SMA_agent_quota": false
+    },
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "remaining-under-eight"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 12,
+        "bookings": 0,
+        "consumed": 61,
+        "remaining": null
+      },
+      "after": {
+        "effects": 12,
+        "bookings": 0,
+        "consumed": 61,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "native_preparation_rejected",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-batch-already-used-position",
+    "category": "batch_atomicity",
+    "mode": "darlt",
+    "precondition": "Position 0 was accepted at this service; positions 1..7 remain unused.",
+    "attempted_operation": {
+      "tool": "batch_query",
+      "units": 8,
+      "variant": "already-used-position"
+    },
+    "applicable": true,
+    "blocked": true,
+    "accepted_before_judge": [
+      false
+    ],
+    "classification": "entire_batch_rejected",
+    "effects_before_after": {
+      "before": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      },
+      "after": {
+        "effects": 1,
+        "bookings": 0,
+        "consumed": 1,
+        "remaining": null
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "rejection_reason": "serial_or_dpop_replay",
+    "atomicity_passed": true
+  },
+  {
+    "case_id": "darlt-double-use",
+    "category": "cross_verifier_double_use",
+    "mode": "darlt",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "agent",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "native agent versus malicious allocating user"
+  },
+  {
+    "case_id": "darlt-overlap-second-agent",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "darlt",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false,
+      "actor": "second",
+      "owner_state_fork": true,
+      "shared_original_wallet_copy": false
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "user",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "native agent versus malicious allocating user"
+  },
+  {
+    "case_id": "darlt-delegate-then-self",
+    "category": "malicious_owner_overlapping_allocation",
+    "mode": "darlt",
+    "precondition": {
+      "independent_service_states": true,
+      "same_logical_domain": true,
+      "fresh_nonce_and_distinct_request_contexts": true,
+      "same_native_position": 0,
+      "OAuth_same_JWT_and_holder_key_fresh_htu_nonce_jti": false,
+      "actor": "user",
+      "owner_state_fork": true,
+      "shared_original_wallet_copy": false
+    },
+    "attempted_operation": "Accept each request at a distinct service, then run native Judge/Identify.",
+    "applicable": true,
+    "blocked": false,
+    "accepted_before_judge": [
+      true,
+      true
+    ],
+    "classification": "user",
+    "effects_before_after": {
+      "before": {
+        "bank_A": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 0,
+          "bookings": 0,
+          "consumed": 0,
+          "remaining": null
+        }
+      },
+      "after": {
+        "bank_A": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        },
+        "bank_B": {
+          "effects": 1,
+          "bookings": 0,
+          "consumed": 1,
+          "remaining": null
+        }
+      }
+    },
+    "protection_scope": "Native recipient-key binding, delegated attributes and 64-unit scope, plus serial consumption at this service; public Judge distinguishes double use from overlapping owner allocation",
+    "native_judge_executed": true,
+    "native_unit_judge_available": true,
+    "judge_key_matches_expected_identity": true,
+    "rejection_reason": [
+      null,
+      null
+    ],
+    "atomicity_passed": true,
+    "attribution_granularity": "native agent versus malicious allocating user"
+  }
+]

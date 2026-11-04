@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "issuer_issue_calls": 1,
+  "delegations": 20,
+  "allocated_pools": 50,
+  "metadata": {
+    "SET_coefficient_bits": 128,
+    "clock_free": false,
+    "construction": "DARLT",
+    "darlt_issuer_issue_calls_total": 1,
+    "private_instance_count": 20,
+    "public_material_count": 0,
+    "public_only_installed": false,
+    "public_verifier_instance_count": 0,
+    "role": "agent",
+    "shared_parent_count": 1,
+    "strict_received": true,
+    "subgroup_checks_per_received_element": 1
+  }
+}

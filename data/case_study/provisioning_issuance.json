@@ -1,0 +1,30 @@
+{
+  "N": 1024,
+  "attributes": {
+    "delegatable": 6,
+    "private": 4
+  },
+  "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+  "darlt_issuer_issue_calls_total": 1,
+  "timing_enabled": true,
+  "instance": "root-peer",
+  "issuer_issue_calls": 1,
+  "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+  "k_max": 64,
+  "parent": "root-peer",
+  "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+  "s": 16,
+  "scheme": "DARLT",
+  "timing": {
+    "issuance_ns": 78805583,
+    "issue_accept_ns": 42740416,
+    "issue_request_ns": 16292333,
+    "issuer_response_ns": 19772750,
+    "keygen_ns": 7460417,
+    "parameter_installation_ns": 235961000,
+    "parent_initialization_ns": 716944084,
+    "setup_ns": 394564083
+  },
+  "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+  "w": 64
+}

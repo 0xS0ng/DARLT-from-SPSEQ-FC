@@ -1,0 +1,35 @@
+//! DARLT from SPSEQ-FC. The current construction is in [`darlt`].
+pub mod adapters;
+#[path = "../bench/baseline_experiment.rs"]
+pub mod baseline_experiment;
+pub mod batch_runtime;
+#[path = "../bench/campaign.rs"]
+pub mod campaign;
+pub mod common;
+pub mod darlt;
+#[path = "../bench/darlt_experiment.rs"]
+pub mod darlt_experiment;
+#[path = "../bench/dispatch.rs"]
+pub mod dispatch;
+#[path = "../bench/experiment.rs"]
+pub mod experiment;
+#[path = "../bench/harness.rs"]
+pub mod harness;
+pub mod lcb24;
+pub mod metadata;
+pub mod ops;
+pub mod pairing_batch;
+#[path = "../bench/phase_checks.rs"]
+pub mod phase_checks;
+#[path = "../bench/pipeline_dispatch.rs"]
+mod pipeline_dispatch;
+pub mod poly_ops;
+pub mod polynomial;
+#[path = "../bench/provisioning_checks.rs"]
+pub mod provisioning_checks;
+#[path = "../bench/runtime_checks.rs"]
+pub mod runtime_checks;
+#[path = "../bench/sampling.rs"]
+pub mod sampling;
+pub mod spseq_fc;
+pub use baseline_core::subgroup_audit;

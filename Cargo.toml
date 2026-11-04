@@ -1,0 +1,62 @@
+[package]
+name = "darlt-spseq-fc"
+version = "0.1.0"
+edition = "2021"
+autobins = false
+
+[features]
+default = []
+op-counts = ["dep:instrument-ops"]
+subgroup-audit = ["baseline-core/subgroup-audit"]
+
+[[bin]]
+name = "check_protocol"
+path = "bench/bin/check_protocol.rs"
+
+[[bin]]
+name = "check_baselines"
+path = "bench/bin/check_baselines.rs"
+
+[[bin]]
+name = "check_runtime"
+path = "bench/bin/check_runtime.rs"
+
+[[bin]]
+name = "check_provisioning"
+path = "bench/bin/check_provisioning.rs"
+
+[[bin]]
+name = "calibrate"
+path = "bench/bin/calibrate.rs"
+
+[[bin]]
+name = "experiment_runner"
+path = "bench/bin/experiment_runner.rs"
+
+[[bin]]
+name = "experiment_worker"
+path = "bench/bin/experiment_worker.rs"
+
+[dependencies]
+instrument-ops = { path = "bench/instrumentation", optional = true }
+baseline-core = { path = "baselines" }
+blstrs = "=0.7.1"
+blst = { version = "=0.3.17", features = ["no-threads"] }
+ff = "=0.13.1"
+group = "=0.13.0"
+rand = "=0.8.8"
+pairing = "=0.23.0"
+sha2 = "=0.10.9"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+blake3 = "=1.3.1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[workspace]
+members = ["baselines", "bench/instrumentation"]
+exclude = ["ecash/rp23", "ecash/lcb24", "case_study/native"]
+resolver = "2"

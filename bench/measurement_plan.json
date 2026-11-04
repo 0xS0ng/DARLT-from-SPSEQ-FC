@@ -1,0 +1,215 @@
+{
+  "timing_window": null,
+  "formal_samples_collected": 0,
+  "sample_counts": {
+    "warmup": 10,
+    "retained_default": 100,
+    "retained_slow": 20,
+    "primitive": 1000,
+    "warmup_long_callback": 1,
+    "retained_long_callback": 5
+  },
+  "scan": {
+    "k": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      96,
+      128
+    ],
+    "attributes": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "range_bits": [
+      8,
+      16,
+      32
+    ],
+    "N": [
+      256,
+      1024,
+      4096
+    ],
+    "s": [
+      16,
+      64,
+      256
+    ],
+    "Gamma": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "agents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  },
+  "timing_enabled": false,
+  "session_marker": "timing-session",
+  "fig10a": {
+    "x_parameter": "k",
+    "k_values": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      96,
+      128
+    ],
+    "x_max": 128,
+    "native_block_boundary": 64,
+    "curves": [
+      {
+        "id": "DARLT",
+        "label": "DARLT",
+        "fixed_variant": "RandomizedAcrossBlocks"
+      },
+      {
+        "id": "DARLT-ablation",
+        "label": "DARLT ablation",
+        "fixed_variant": "RandomizedAcrossBlocks"
+      },
+      {
+        "id": "SMA2RT",
+        "label": "SMA²RT",
+        "fixed_variant": "safe_random_complete_batch"
+      }
+    ]
+  },
+  "variant_selection": {
+    "enabled": false
+  },
+  "table_iv": {
+    "schemes": [
+      "DARLT",
+      "SMA²RT",
+      "NIAT",
+      "CPAT",
+      "HinToken",
+      "MSB+23",
+      "SLW+25",
+      "RP23-C",
+      "RP23-D",
+      "LCB24"
+    ],
+    "k_values": [
+      1,
+      16,
+      64
+    ]
+  },
+  "sampling_implementation": {
+    "warmup": 10,
+    "ordinary": 100,
+    "slow": 20,
+    "primitive": 1000,
+    "sd": "sample SD denominator n-1",
+    "cv_limit": 0.05,
+    "remeasure": "retain all attempts; repeat complete sample set of CV-failing cohorts, at most three attempts in the same continuous session; never reject individual samples",
+    "scheduler": "role pipelines within ordered paper blocks; separate live request each sample; common received bytes for mutually exclusive validation profiles",
+    "long_callback": {
+      "warmup": 1,
+      "retained": 5,
+      "whitelist_source": "campaign::LONG_CALLBACKS"
+    }
+  },
+  "equal_budget_configuration": {
+    "agents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "N": 1024,
+    "s": 16,
+    "w": 64,
+    "quota_per_agent": "1024/A",
+    "darlt_pools_per_agent": "64/A",
+    "darlt_issuer_calls": 1,
+    "sma_issuer_calls": "A",
+    "system_account": "actual issuance both roles + actual cold parent openings + all delegation both roles; setup/keygen/public installation and first-use scope opening separate",
+    "codec_boundary": "current formal issuance/request/response receiver segments parse actual sender bytes; delegation/public-package receive parsing is actual; each issuer-only ledger excludes counterpart roles"
+  },
+  "substage_scope": {
+    "detailed_schemes": [
+      "DARLT"
+    ],
+    "detailed_categories": [
+      "codec",
+      "point_decode_and_subgroup",
+      "hash_to_group",
+      "polynomial",
+      "field_arithmetic",
+      "sigma_response",
+      "state",
+      "installation"
+    ],
+    "other_schemes": "role/stage/cold-hot totals plus the mandatory independent strict received-decoding stage for all ten schemes",
+    "total_timing": "one execution records total and consecutive intervals, only DARLT default k16 detailed; no component reruns"
+  },
+  "one_session_no_duration_limit": true,
+  "input_pool_policy": {
+    "distinct_input": "fresh complete request per sample; fixed native PP/keys/wallet/precomputed proofs may be reused",
+    "state": "deep restore of bank/verifier snapshot before each verification step and sample",
+    "cross_sample_cache": "fixed verification key and native precomputations only; no proof/token-specific intermediate or verdict",
+    "hardware_cache_claim": "none",
+    "one_active_slot_per_immutable_configuration": true
+  },
+  "fixed_verification": {
+    "profiles": {
+      "DARLT": "RandomizedAcrossBlocks",
+      "SMA²RT": "safe_random_complete_batch",
+      "NIAT": "native_C3_random_second_equation",
+      "CPAT": "safe_random_FHS_same_metadata_cached",
+      "HinToken": "safe_random_batch_by_same_issuer_cached_anchor",
+      "MSB+23": "Randomized",
+      "SLW+25": "Randomized",
+      "RP23-C": "Randomized",
+      "RP23-D": "Randomized",
+      "LCB24": "RandomizedCachedGtAnchor"
+    },
+    "rule": "all acceptance pairing equations in one validation step checked together using SET; DARLT combines all native blocks in the same complete request; interactive schemes combine within each round only",
+    "coefficients": {
+      "bits": 128,
+      "minimum_inclusive": 1,
+      "maximum_inclusive": "340282366920938463463374607431768211455",
+      "distribution": "independent uniform nonzero 16-byte little-endian integers; rejection of all-zero bytes; inject into scalar field without modular reduction bias",
+      "formal_random_source": "StdRng seeded with 32 bytes from operating-system OsRng outside the timed boundary; coefficient extraction/rejection inside native validation",
+      "clock_free_tests": "deterministic cryptographic RNG seeds for reproducible correctness only",
+      "native_protocol_randomness": "signature, Sigma, FS challenge and prover randomness unchanged"
+    },
+    "single_equation": "one-equation steps may use exact native check, mathematically the same acceptance predicate with no pointless redundant exponent",
+    "GT_transcript_values": "pairing values defining native Sigma/FS transcript inputs or backend outputs are still computed exactly; they are not boolean acceptance equations to merge",
+    "specification_timing_enabled": false,
+    "candidate_timing_enabled": false,
+    "speed_selection": false
+  },
+  "formal_ready_pending": [
+    "Configure an active sampling window before collecting retained samples."
+  ]
+}

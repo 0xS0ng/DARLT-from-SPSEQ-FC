@@ -1,0 +1,962 @@
+[
+  {
+    "trace_id": "booking-00",
+    "workload": "booking",
+    "pools": [
+      0
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "861ce09fe9fc443675ba5bf818ff38c31de2dc4a60526a8c515e6dea84d5c7a9a6bbf2b8b8482c28f560886e77d397ae",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerA",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        0
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 11012667,
+        "delegation_ns": 20102250,
+        "delegation_receive_ns": 8904166,
+        "delegation_request_ns": 185291
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-01",
+    "workload": "booking",
+    "pools": [
+      1
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "8eee336f7256d257617d34533f2d1a7368fb6bb1e97abc95be37cd7ef6a361120be5460156c7f4ab8e65c2a373bdeb14",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerB",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        1
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 13568625,
+        "delegation_ns": 24395125,
+        "delegation_receive_ns": 10609209,
+        "delegation_request_ns": 217083
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-02",
+    "workload": "booking",
+    "pools": [
+      2
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "94e96e008328597dbe3610bd5a7347223ccb28de476d7b23c0b737e89ae577ea8ccb5d000bbea28621e0f7ec4f169fbb",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerC",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        2
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 13869958,
+        "delegation_ns": 25177792,
+        "delegation_receive_ns": 11090375,
+        "delegation_request_ns": 217292
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-03",
+    "workload": "booking",
+    "pools": [
+      3
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "94e87fff8434b595847b97d5f433aa68cdf217eaa7fae78f747cc460655ff3c3c812ec54eb2c0189bd234d8f682aaa91",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerD",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        3
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 13853500,
+        "delegation_ns": 24788875,
+        "delegation_receive_ns": 10712959,
+        "delegation_request_ns": 222042
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-04",
+    "workload": "booking",
+    "pools": [
+      4
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "8c6b06dacf116bc4a074afabad3c65ef20ec84004ee582b922bfdd770fb2a4bccdd26e6503eabefd3d8e0e7b1047a0f9",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerE",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        4
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 12342625,
+        "delegation_ns": 22371083,
+        "delegation_receive_ns": 9833708,
+        "delegation_request_ns": 194542
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-05",
+    "workload": "booking",
+    "pools": [
+      5
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "a65be85906e8a7b8c44a8328a9a6a6cafecb4cb8ec4d9842f2d42182db5bcd44ae3d7f53b49f63b7793adbd6e643d943",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerF",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        5
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 14752000,
+        "delegation_ns": 26348708,
+        "delegation_receive_ns": 11369209,
+        "delegation_request_ns": 227250
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-06",
+    "workload": "booking",
+    "pools": [
+      6
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "af8ad3282850be46232400a7d4f66e0d51a207aee41e7c28c6682f9d9e7c11dac8f71158db3b2e824ff950f3332ed1f6",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerG",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        6
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 13831292,
+        "delegation_ns": 24677791,
+        "delegation_receive_ns": 10617250,
+        "delegation_request_ns": 229000
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-07",
+    "workload": "booking",
+    "pools": [
+      7
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "b75a3baebad699cfaa421b5655f808d6895bb35e99784b68920700eeaf07cc3cb7b4fb3a066a1540a9e46d2739550fc0",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerH",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        7
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 14732666,
+        "delegation_ns": 26068333,
+        "delegation_receive_ns": 11093042,
+        "delegation_request_ns": 242458
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-08",
+    "workload": "booking",
+    "pools": [
+      8
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "93aed65546671aaf65ff7344c82c83f642c2402b02c8f67eec4cb436bdb83104f070ca7aae7d1beb21b86e840351920d",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerI",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        8
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 14209750,
+        "delegation_ns": 25561000,
+        "delegation_receive_ns": 11129666,
+        "delegation_request_ns": 221292
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "booking-09",
+    "workload": "booking",
+    "pools": [
+      9
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "b0e1b5a0c3baecc646a84df7fd5af2f22c137af09c53c2bb61bbf6939ae471b9680bc6b9fd48f35a420b69fab2686a48",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 16,
+      "timing_enabled": true,
+      "instance": "peerJ",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        9
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 13796000,
+        "delegation_ns": 24920500,
+        "delegation_receive_ns": 10913666,
+        "delegation_request_ns": 210584
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-00",
+    "workload": "research",
+    "pools": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "afff61a89a7f3f5b0bbba2710e6f284176afedeeae12fecbe6f3d7ea7fcc6c15b59eb3a8346c80b72b41426c9608d74a",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerK",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 40647958,
+        "delegation_ns": 54579750,
+        "delegation_receive_ns": 13745042,
+        "delegation_request_ns": 186333
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-01",
+    "workload": "research",
+    "pools": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "a7f04c7aef7cbb3547cfe2aa263606d2e727ca8041b12c2ddc0eafb68163e6f10901209bf08172e0c64a7dd727c61d62",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerL",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 43088125,
+        "delegation_ns": 56951417,
+        "delegation_receive_ns": 13634292,
+        "delegation_request_ns": 228875
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-02",
+    "workload": "research",
+    "pools": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "8128e6a11a84f9dd5dea7ed7a5d4b02d9eadf9ee7004a1ee1008324e37e788c2dc2adeb01c02ef1fe04a3beeee9a8813",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerM",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 44258667,
+        "delegation_ns": 58405416,
+        "delegation_receive_ns": 13918791,
+        "delegation_request_ns": 227709
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-03",
+    "workload": "research",
+    "pools": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "8e195da0661ce74ef25c333b817018c2f941d4bc95543c0995af1281b4e2529b8e081a6660f282271d5eefc1bc5e5054",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerN",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 43943208,
+        "delegation_ns": 58263625,
+        "delegation_receive_ns": 14070458,
+        "delegation_request_ns": 249750
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-04",
+    "workload": "research",
+    "pools": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "a9c3c702037c93333dbb7186af36d27346fcc52500ff9e2e36c484cd186425c0d7660c916fb790701e840004986a3203",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerO",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 43859375,
+        "delegation_ns": 58117583,
+        "delegation_receive_ns": 14050916,
+        "delegation_request_ns": 207125
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-05",
+    "workload": "research",
+    "pools": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "8d04feda2ecc429062ff55864d9f10991e7d3337d64db8ffd32d50acdb4c99f244a8026b8d9240a49b6377986179031b",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerP",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 43649375,
+        "delegation_ns": 57719416,
+        "delegation_receive_ns": 13858917,
+        "delegation_request_ns": 210917
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-06",
+    "workload": "research",
+    "pools": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "abe2f830da4edee0c394c39d8c74a7e57d5ec258fb8288e526c1eb17fcd32643297e2bb4d96aee6b49a984d8d2fd4388",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerQ",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 45156417,
+        "delegation_ns": 59570041,
+        "delegation_receive_ns": 14175375,
+        "delegation_request_ns": 237917
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-07",
+    "workload": "research",
+    "pools": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "a6e4ab29d1c0a8c20f76a501038b1f3b4e237becbe5df7aa3dc81c12f2e4cedf9be580d38d3eef46ca92daf173af4e58",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerR",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 42809416,
+        "delegation_ns": 56923375,
+        "delegation_receive_ns": 13909084,
+        "delegation_request_ns": 204500
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-08",
+    "workload": "research",
+    "pools": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "b14f4251a798032f49a7d816475e7dcca07ff7e949170241503eb925214caadd37643758f16ef17a2f05e11f094e5d9c",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerS",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 43334458,
+        "delegation_ns": 57419375,
+        "delegation_receive_ns": 13865584,
+        "delegation_request_ns": 218792
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  },
+  {
+    "trace_id": "research-09",
+    "workload": "research",
+    "pools": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "child": {
+      "N": 1024,
+      "agent_public_key": "ac48d4831e1341b266e3eafbd2b0e1bd4c7cedaec28dc2012b01ffc5027becbc4c6360b09127bb04bf904146cf9f1b8e",
+      "allowed_attrs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "attributes": {
+        "delegatable": 6,
+        "private": 4
+      },
+      "credential_id": "ce5bf3aa1ecfef620adf4e5517c5679c8da21259d6e49559f2290b8056658f13",
+      "darlt_issuer_issue_calls_total": 1,
+      "delegated_units": 64,
+      "timing_enabled": true,
+      "instance": "peerT",
+      "issuer_issue_calls": 1,
+      "issuer_public_key_id": "9875167803c721cc0e7081c17696420b12f2d7f9fb3f1f91e9b73d76507b0fa3",
+      "k_max": 64,
+      "parent": "root-peer",
+      "pools": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "positions": "global: pool*s+offset",
+      "public_parameters_id": "b6bfc6267f0447aa7d22d38d72f5e33ad3cc949900c6fafd7f4affcf5bb2b590",
+      "s": 16,
+      "scheme": "DARLT",
+      "timing": {
+        "delegation_derive_ns": 38277625,
+        "delegation_ns": 51718542,
+        "delegation_receive_ns": 13252000,
+        "delegation_request_ns": 188583
+      },
+      "user_public_key": "a388f1a95f05b6b349611e9bba769b69b192be198d8a96f8192834ef093930fb038f3a240a9a042643611d14eddf9b08",
+      "w": 64
+    }
+  }
+]

@@ -1,0 +1,39 @@
+[package]
+name = "lcb24-native"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+darlt-spseq-fc = { path = "../.." }
+ark-bls12-381 = { version = "=0.3.0", default-features = false, features = ["curve"] }
+ark-crypto-primitives = { version = "=0.3.0", default-features = false, features = ["std", "r1cs"] }
+ark-ec = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-ed-on-bls12-381 = { version = "=0.3.0", default-features = false, features = ["std", "r1cs"] }
+ark-ff = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-groth16 = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-r1cs-std = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-relations = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-serialize = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-std = { version = "=0.3.0", default-features = false, features = ["std"] }
+ark-sponge = { git = "https://github.com/arkworks-rs/sponge", rev = "51d6fc9", default-features = false, features = ["std", "r1cs"] }
+arkworks-native-gadgets = { git = "https://github.com/kev-liao/arkworks-gadgets", rev = "8113b8faa2b71cd8ffdc6642db9e84236fb4cb85", default-features = false, features = ["std"] }
+arkworks-r1cs-gadgets = { git = "https://github.com/kev-liao/arkworks-gadgets", rev = "8113b8faa2b71cd8ffdc6642db9e84236fb4cb85", default-features = false, features = ["std"] }
+arkworks-utils = { git = "https://github.com/kev-liao/arkworks-gadgets", rev = "8113b8faa2b71cd8ffdc6642db9e84236fb4cb85", default-features = false, features = ["std", "poseidon_bls381_x3_3"] }
+blake3 = "=1.3.1"
+derivative = "=2.2.0"
+serde = "=1.0.229"
+serde_derive = "=1.0.229"
+serde_json = "=1.0.151"
+blstrs = "=0.7.1"
+group = "=0.13.0"
+
+[features]
+op-counts = ["darlt-spseq-fc/op-counts"]
+subgroup-audit = ["darlt-spseq-fc/subgroup-audit"]
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

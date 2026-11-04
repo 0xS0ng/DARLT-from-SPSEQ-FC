@@ -1,0 +1,2 @@
+scheme,component,bytes,count,component_sum_bytes,unified_wallet_codec,stock_source,cache_hit,note,source_job_id,raw_line,attempt,phase,trial,wire_sha256,source_raw_sha256
+LCB24,native_Ark_Groth16_proof_inventory,196608,1024,196800,null,native_precompute_all_from/first_pipeline_issue_receive,False,"sum of logged native wallet components, not a unified encoded-wallet length",LCB24/full_inventory,4742,1,retained,1011000000099,,3c08503d382526528d44b9a073c56a5d8e579a07c498bc9ac14747c1b74aadd9

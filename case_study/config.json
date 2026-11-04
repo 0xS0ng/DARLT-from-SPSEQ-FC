@@ -1,0 +1,93 @@
+{
+  "mcp_version": "2026-07-28",
+  "model": "google/gemini-3.8-flash",
+  "provider": {
+    "order": [
+      "google-vertex/global"
+    ],
+    "only": [
+      "google-vertex/global"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "workloads": {
+    "booking": {
+      "units": [
+        1,
+        1,
+        4,
+        1,
+        1
+      ],
+      "quota": 16,
+      "pools_per_agent": 1
+    },
+    "research": {
+      "units": [
+        1,
+        8,
+        16,
+        4,
+        32
+      ],
+      "quota": 64,
+      "pools_per_agent": 4
+    }
+  },
+  "model_runs_per_workload": 10,
+  "issuance_count": 1,
+  "agent_count": 20,
+  "allocated_pool_count": 50,
+  "cache_rule": "Prepare one token per distinct tool; replenish for a later use when unallocated units remain.",
+  "booking_prepared_units_total": 8,
+  "research_prepared_units_total": 61,
+  "deployments": [
+    "oauth",
+    "sma",
+    "darlt-ablation",
+    "darlt"
+  ],
+  "replay_warmups": 2,
+  "replay_retained": 10,
+  "replay_groups": 80,
+  "replay_max_attempts": 3,
+  "replay_CV_threshold_percent": 5,
+  "replay_CV_fields": [
+    "agent_critical_ns",
+    "server_verification_commit_ns"
+  ],
+  "replay_selection": "first stable complete attempt, otherwise first attempt marked unresolved",
+  "replay_pacing": "Prepare all workflow tokens before the first request.",
+  "verification": {
+    "received_bytes_first": true,
+    "subgroup_checks_per_received_element": 1,
+    "batch_coefficient_bits": 128
+  },
+  "threads": {
+    "RAYON_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "background_prepare_workers": 1
+  },
+  "server_window": "After full HTTP request body is received, before strict JSON decode, through authorization, duplicate checking and atomic tool/state commit; excludes socket receive waiting and response serialization",
+  "sent_bytes": "HTTP/1.1 request line + actual request headers + CRLF + UTF-8 body, including auth envelope; no TCP/TLS/response bytes; raw native token bytes are a nested component",
+  "fig12a_attribution": "DARLT=native_online_ns+decode_ns+verification_ns; Other=agent_critical_ns−DARLT; proof_path_inclusive_ns=readiness_gate_ns+online_bridge_ns+decode_ns+verification_ns; non_proof_path_ns=agent_critical_ns−proof_path_inclusive_ns.",
+  "native_processes": {
+    "agent": "separate single-thread native process",
+    "server": "separate single-thread native process",
+    "server_material": "public verifier package only"
+  },
+  "fig12a_ylim_ms": [
+    1,
+    100000
+  ],
+  "fig12b_ylim_ms": [
+    1,
+    10000
+  ],
+  "fig12b_colors": {
+    "booking": "neutral grey",
+    "research": "neutral grey"
+  },
+  "fig12b_hatch": false
+}

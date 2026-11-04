@@ -1,0 +1,24 @@
+[package]
+name = "darlt-case-study-native"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[features]
+default = []
+subgroup-audit = ["darlt-spseq-fc/subgroup-audit", "baseline-core/subgroup-audit"]
+
+[dependencies]
+darlt-spseq-fc = { path = "../.." }
+baseline-core = { path = "../../baselines" }
+blstrs = "=0.7.1"
+ff = "=0.13.1"
+group = "=0.13.0"
+rand = "=0.8.8"
+serde_json = "=1.0.151"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

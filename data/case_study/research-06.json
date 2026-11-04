@@ -1,0 +1,1868 @@
+{
+  "trace_id": "research-06",
+  "workload": "research",
+  "pools": [
+    34,
+    35,
+    36,
+    37
+  ],
+  "workflow": {
+    "run": 16,
+    "workload": "research",
+    "mode": "darlt",
+    "passed": true,
+    "preparations_during_workflow_count": 0,
+    "scripted_execution": false,
+    "all_prepared_before_workflow": false,
+    "initial_preparation": {
+      "prepared_tools": [
+        "search_sources",
+        "fetch_documents",
+        "query_dataset",
+        "run_analysis",
+        "export_report"
+      ],
+      "prepared_entry_count": 5,
+      "prepared_token_count": 5,
+      "reserved_unit_count": 61,
+      "jobs": [
+        {
+          "token_id": 1,
+          "tool": "search_sources",
+          "units": 1,
+          "positions": [
+            544
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404871062541,
+          "started_at_ns": 620404871067916,
+          "ready_at_ns": 620404907538750,
+          "preparation_bridge_ns": 36470834,
+          "preparation_bridge_queue_ns": 500,
+          "native_preparation_ns": 36318334
+        },
+        {
+          "token_id": 2,
+          "tool": "fetch_documents",
+          "units": 8,
+          "positions": [
+            545,
+            546,
+            547,
+            548,
+            549,
+            550,
+            551,
+            552
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404907546583,
+          "started_at_ns": 620404907550541,
+          "ready_at_ns": 620404980763041,
+          "preparation_bridge_ns": 73212500,
+          "preparation_bridge_queue_ns": 417,
+          "native_preparation_ns": 73071250
+        },
+        {
+          "token_id": 3,
+          "tool": "query_dataset",
+          "units": 16,
+          "positions": [
+            553,
+            554,
+            555,
+            556,
+            557,
+            558,
+            559,
+            560,
+            561,
+            562,
+            563,
+            564,
+            565,
+            566,
+            567,
+            568
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404980772708,
+          "started_at_ns": 620404980775875,
+          "ready_at_ns": 620405111412875,
+          "preparation_bridge_ns": 130637000,
+          "preparation_bridge_queue_ns": 375,
+          "native_preparation_ns": 130498209
+        },
+        {
+          "token_id": 4,
+          "tool": "run_analysis",
+          "units": 4,
+          "positions": [
+            569,
+            570,
+            571,
+            572
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620405111427375,
+          "started_at_ns": 620405111431458,
+          "ready_at_ns": 620405163607291,
+          "preparation_bridge_ns": 52175833,
+          "preparation_bridge_queue_ns": 583,
+          "native_preparation_ns": 51999042
+        },
+        {
+          "token_id": 5,
+          "tool": "export_report",
+          "units": 32,
+          "positions": [
+            573,
+            574,
+            575,
+            576,
+            577,
+            578,
+            579,
+            580,
+            581,
+            582,
+            583,
+            584,
+            585,
+            586,
+            587,
+            588,
+            589,
+            590,
+            591,
+            592,
+            593,
+            594,
+            595,
+            596,
+            597,
+            598,
+            599,
+            600,
+            601,
+            602,
+            603,
+            604
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620405163614333,
+          "started_at_ns": 620405163617541,
+          "ready_at_ns": 620405376928541,
+          "preparation_bridge_ns": 213311000,
+          "preparation_bridge_queue_ns": 375,
+          "native_preparation_ns": 213124083
+        }
+      ],
+      "initial_preparation_ns": 505877417,
+      "initial_native_preparation_ns": 505010918,
+      "started_at_ns": 620404871057916,
+      "finished_at_ns": 620405376935333
+    },
+    "preparations": [
+      {
+        "token_id": 1,
+        "tool": "search_sources",
+        "units": 1,
+        "positions": [
+          544
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620404871062541,
+        "started_at_ns": 620404871067916,
+        "ready_at_ns": 620404907538750,
+        "preparation_bridge_ns": 36470834,
+        "preparation_bridge_queue_ns": 500,
+        "native_preparation_ns": 36318334
+      },
+      {
+        "token_id": 2,
+        "tool": "fetch_documents",
+        "units": 8,
+        "positions": [
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620404907546583,
+        "started_at_ns": 620404907550541,
+        "ready_at_ns": 620404980763041,
+        "preparation_bridge_ns": 73212500,
+        "preparation_bridge_queue_ns": 417,
+        "native_preparation_ns": 73071250
+      },
+      {
+        "token_id": 3,
+        "tool": "query_dataset",
+        "units": 16,
+        "positions": [
+          553,
+          554,
+          555,
+          556,
+          557,
+          558,
+          559,
+          560,
+          561,
+          562,
+          563,
+          564,
+          565,
+          566,
+          567,
+          568
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620404980772708,
+        "started_at_ns": 620404980775875,
+        "ready_at_ns": 620405111412875,
+        "preparation_bridge_ns": 130637000,
+        "preparation_bridge_queue_ns": 375,
+        "native_preparation_ns": 130498209
+      },
+      {
+        "token_id": 4,
+        "tool": "run_analysis",
+        "units": 4,
+        "positions": [
+          569,
+          570,
+          571,
+          572
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620405111427375,
+        "started_at_ns": 620405111431458,
+        "ready_at_ns": 620405163607291,
+        "preparation_bridge_ns": 52175833,
+        "preparation_bridge_queue_ns": 583,
+        "native_preparation_ns": 51999042
+      },
+      {
+        "token_id": 5,
+        "tool": "export_report",
+        "units": 32,
+        "positions": [
+          573,
+          574,
+          575,
+          576,
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583,
+          584,
+          585,
+          586,
+          587,
+          588,
+          589,
+          590,
+          591,
+          592,
+          593,
+          594,
+          595,
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620405163614333,
+        "started_at_ns": 620405163617541,
+        "ready_at_ns": 620405376928541,
+        "preparation_bridge_ns": 213311000,
+        "preparation_bridge_queue_ns": 375,
+        "native_preparation_ns": 213124083
+      }
+    ],
+    "events": [
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620404871062541,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_sources",
+        "units": 1,
+        "positions": [
+          544
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620404871062541
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620404871066625,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_sources"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620404907538750,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_sources"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620404907546583,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "fetch_documents",
+        "units": 8,
+        "positions": [
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620404907546583
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620404907549333,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "fetch_documents"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620404980763041,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "fetch_documents"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620404980772708,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "query_dataset",
+        "units": 16,
+        "positions": [
+          553,
+          554,
+          555,
+          556,
+          557,
+          558,
+          559,
+          560,
+          561,
+          562,
+          563,
+          564,
+          565,
+          566,
+          567,
+          568
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620404980772708
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620404980775000,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "query_dataset"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620405111412875,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "query_dataset"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620405111427375,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "run_analysis",
+        "units": 4,
+        "positions": [
+          569,
+          570,
+          571,
+          572
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620405111427375
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620405111430291,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "run_analysis"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620405163607291,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "run_analysis"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620405163614333,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "export_report",
+        "units": 32,
+        "positions": [
+          573,
+          574,
+          575,
+          576,
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583,
+          584,
+          585,
+          586,
+          587,
+          588,
+          589,
+          590,
+          591,
+          592,
+          593,
+          594,
+          595,
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620405163614333
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620405163616458,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "export_report"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620405376928541,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "export_report"
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620408901077625,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_sources"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620408909129916,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_sources",
+        "token_id": 1
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620408949956625,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_sources",
+        "positions": [
+          544
+        ],
+        "token_id": 1
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620411716251375,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "fetch_documents"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620411737189625,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "fetch_documents",
+        "token_id": 2
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620411780388541,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "fetch_documents",
+        "positions": [
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552
+        ],
+        "token_id": 2
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620414203213333,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "query_dataset"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620414237265875,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "query_dataset",
+        "token_id": 3
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620414285408791,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "query_dataset",
+        "positions": [
+          553,
+          554,
+          555,
+          556,
+          557,
+          558,
+          559,
+          560,
+          561,
+          562,
+          563,
+          564,
+          565,
+          566,
+          567,
+          568
+        ],
+        "token_id": 3
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620416455930583,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "run_analysis"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620416469427000,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "run_analysis",
+        "token_id": 4
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620416510270500,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "run_analysis",
+        "positions": [
+          569,
+          570,
+          571,
+          572
+        ],
+        "token_id": 4
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620495237426041,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "export_report"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620495288656750,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "export_report",
+        "token_id": 5
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620495346700333,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "export_report",
+        "positions": [
+          573,
+          574,
+          575,
+          576,
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583,
+          584,
+          585,
+          586,
+          587,
+          588,
+          589,
+          590,
+          591,
+          592,
+          593,
+          594,
+          595,
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604
+        ],
+        "token_id": 5
+      }
+    ],
+    "steps": [
+      {
+        "mode": "darlt",
+        "tool": "search_sources",
+        "units": 1,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-81",
+        "tool_result": {
+          "document_ids": [
+            "doc-01",
+            "doc-02",
+            "doc-03",
+            "doc-04",
+            "doc-05",
+            "doc-06",
+            "doc-07",
+            "doc-08"
+          ],
+          "query": "market",
+          "source_count": 8,
+          "sources": [
+            {
+              "document_id": "doc-01",
+              "title": "Local market source doc-01"
+            },
+            {
+              "document_id": "doc-02",
+              "title": "Local market source doc-02"
+            },
+            {
+              "document_id": "doc-03",
+              "title": "Local market source doc-03"
+            },
+            {
+              "document_id": "doc-04",
+              "title": "Local market source doc-04"
+            },
+            {
+              "document_id": "doc-05",
+              "title": "Local market source doc-05"
+            },
+            {
+              "document_id": "doc-06",
+              "title": "Local market source doc-06"
+            },
+            {
+              "document_id": "doc-07",
+              "title": "Local market source doc-07"
+            },
+            {
+              "document_id": "doc-08",
+              "title": "Local market source doc-08"
+            }
+          ]
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "query": "market",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620408901077625,
+          "token_ready_at_ns": 620404907538750,
+          "token_id": 1,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 1,
+          "tool": "search_sources",
+          "units": 1,
+          "positions": [
+            544
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404871062541,
+          "started_at_ns": 620404871067916,
+          "ready_at_ns": 620404907538750,
+          "preparation_bridge_ns": 36470834,
+          "preparation_bridge_queue_ns": 500,
+          "native_preparation_ns": 36318334
+        },
+        "request_bytes": {
+          "request_body_bytes": 8486,
+          "request_line_bytes": 26,
+          "request_header_bytes": 346,
+          "http_sent_bytes": 8858,
+          "auth_envelope_bytes": 8105,
+          "native_token_bytes": 4005
+        },
+        "http_sent_bytes": 8858,
+        "request_body_bytes": 8486,
+        "native_token_bytes": 4005,
+        "auth_envelope_bytes": 8105,
+        "timing": {
+          "online_ns": 6762542,
+          "decode_ns": 6440333,
+          "native_round_ns": 36433000,
+          "request_body_bytes": 8486,
+          "server_verification_commit_ns": 38689083,
+          "state_backend_ns": 2022541,
+          "verification_ns": 29399250,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 43291,
+          "agent_critical_ns": 48879000,
+          "active_tool_ns": 48879000,
+          "request_latency_ns": 48835709,
+          "mcp_http_ns": 40802834,
+          "online_bridge_ns": 7867791,
+          "online_bridge_queue_ns": 4333,
+          "online_rpc_ns": 7863458,
+          "native_online_ns": 6762542,
+          "demand_at_ns": 620408901077625,
+          "readiness_finished_at_ns": 620408901120916,
+          "online_started_at_ns": 620408901262125,
+          "online_finished_at_ns": 620408909129916,
+          "http_started_at_ns": 620408909153791,
+          "response_received_at_ns": 620408949956625,
+          "request_readiness_segment_ns": 43291,
+          "request_context_segment_ns": 141209,
+          "request_online_bridge_segment_ns": 7867791,
+          "request_envelope_segment_ns": 23875,
+          "request_HTTP_segment_ns": 40802834,
+          "request_segment_sum_ns": 48879000,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1105249
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "fetch_documents",
+        "units": 8,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-82",
+        "tool_result": {
+          "dataset_id": "market-v1",
+          "document_count": 8,
+          "documents": [
+            {
+              "document_id": "doc-01",
+              "text": "Deterministic market evidence doc-01"
+            },
+            {
+              "document_id": "doc-02",
+              "text": "Deterministic market evidence doc-02"
+            },
+            {
+              "document_id": "doc-03",
+              "text": "Deterministic market evidence doc-03"
+            },
+            {
+              "document_id": "doc-04",
+              "text": "Deterministic market evidence doc-04"
+            },
+            {
+              "document_id": "doc-05",
+              "text": "Deterministic market evidence doc-05"
+            },
+            {
+              "document_id": "doc-06",
+              "text": "Deterministic market evidence doc-06"
+            },
+            {
+              "document_id": "doc-07",
+              "text": "Deterministic market evidence doc-07"
+            },
+            {
+              "document_id": "doc-08",
+              "text": "Deterministic market evidence doc-08"
+            }
+          ]
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "document_ids": [
+            "doc-01",
+            "doc-02",
+            "doc-03",
+            "doc-04",
+            "doc-05",
+            "doc-06",
+            "doc-07",
+            "doc-08"
+          ],
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620411716251375,
+          "token_ready_at_ns": 620404980763041,
+          "token_id": 2,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 2,
+          "tool": "fetch_documents",
+          "units": 8,
+          "positions": [
+            545,
+            546,
+            547,
+            548,
+            549,
+            550,
+            551,
+            552
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404907546583,
+          "started_at_ns": 620404907550541,
+          "ready_at_ns": 620404980763041,
+          "preparation_bridge_ns": 73212500,
+          "preparation_bridge_queue_ns": 417,
+          "native_preparation_ns": 73071250
+        },
+        "request_bytes": {
+          "request_body_bytes": 13185,
+          "request_line_bytes": 26,
+          "request_header_bytes": 348,
+          "http_sent_bytes": 13559,
+          "auth_envelope_bytes": 12731,
+          "native_token_bytes": 6318
+        },
+        "http_sent_bytes": 13559,
+        "request_body_bytes": 13185,
+        "native_token_bytes": 6318,
+        "auth_envelope_bytes": 12731,
+        "timing": {
+          "online_ns": 19803709,
+          "decode_ns": 7212083,
+          "native_round_ns": 39155542,
+          "request_body_bytes": 13185,
+          "server_verification_commit_ns": 41607000,
+          "state_backend_ns": 2267708,
+          "verification_ns": 31431083,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 24166,
+          "agent_critical_ns": 64137166,
+          "active_tool_ns": 64137166,
+          "request_latency_ns": 64113000,
+          "mcp_http_ns": 43184083,
+          "online_bridge_ns": 20837167,
+          "online_bridge_queue_ns": 3458,
+          "online_rpc_ns": 20833709,
+          "native_online_ns": 19803709,
+          "demand_at_ns": 620411716251375,
+          "readiness_finished_at_ns": 620411716275541,
+          "online_started_at_ns": 620411716352458,
+          "online_finished_at_ns": 620411737189625,
+          "http_started_at_ns": 620411737204458,
+          "response_received_at_ns": 620411780388541,
+          "request_readiness_segment_ns": 24166,
+          "request_context_segment_ns": 76917,
+          "request_online_bridge_segment_ns": 20837167,
+          "request_envelope_segment_ns": 14833,
+          "request_HTTP_segment_ns": 43184083,
+          "request_segment_sum_ns": 64137166,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1033458
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "query_dataset",
+        "units": 16,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-83",
+        "tool_result": {
+          "dataset_id": "market-v1",
+          "document_count": 8,
+          "row_count": 16,
+          "rows": [
+            {
+              "row_id": 1,
+              "value": 10
+            },
+            {
+              "row_id": 2,
+              "value": 20
+            },
+            {
+              "row_id": 3,
+              "value": 30
+            },
+            {
+              "row_id": 4,
+              "value": 40
+            },
+            {
+              "row_id": 5,
+              "value": 50
+            },
+            {
+              "row_id": 6,
+              "value": 60
+            },
+            {
+              "row_id": 7,
+              "value": 70
+            },
+            {
+              "row_id": 8,
+              "value": 80
+            },
+            {
+              "row_id": 9,
+              "value": 90
+            },
+            {
+              "row_id": 10,
+              "value": 100
+            },
+            {
+              "row_id": 11,
+              "value": 110
+            },
+            {
+              "row_id": 12,
+              "value": 120
+            },
+            {
+              "row_id": 13,
+              "value": 130
+            },
+            {
+              "row_id": 14,
+              "value": 140
+            },
+            {
+              "row_id": 15,
+              "value": 150
+            },
+            {
+              "row_id": 16,
+              "value": 160
+            }
+          ]
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "dataset_id": "market-v1",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620414203213333,
+          "token_ready_at_ns": 620405111412875,
+          "token_id": 3,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 3,
+          "tool": "query_dataset",
+          "units": 16,
+          "positions": [
+            553,
+            554,
+            555,
+            556,
+            557,
+            558,
+            559,
+            560,
+            561,
+            562,
+            563,
+            564,
+            565,
+            566,
+            567,
+            568
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620404980772708,
+          "started_at_ns": 620404980775875,
+          "ready_at_ns": 620405111412875,
+          "preparation_bridge_ns": 130637000,
+          "preparation_bridge_queue_ns": 375,
+          "native_preparation_ns": 130498209
+        },
+        "request_bytes": {
+          "request_body_bytes": 18107,
+          "request_line_bytes": 26,
+          "request_header_bytes": 346,
+          "http_sent_bytes": 18479,
+          "auth_envelope_bytes": 17719,
+          "native_token_bytes": 8812
+        },
+        "http_sent_bytes": 18479,
+        "request_body_bytes": 18107,
+        "native_token_bytes": 8812,
+        "auth_envelope_bytes": 17719,
+        "timing": {
+          "online_ns": 32710292,
+          "decode_ns": 8389958,
+          "native_round_ns": 44599792,
+          "request_body_bytes": 18107,
+          "server_verification_commit_ns": 46636625,
+          "state_backend_ns": 1922792,
+          "verification_ns": 35655000,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 34458,
+          "agent_critical_ns": 82195458,
+          "active_tool_ns": 82195458,
+          "request_latency_ns": 82161000,
+          "mcp_http_ns": 48129458,
+          "online_bridge_ns": 33908792,
+          "online_bridge_queue_ns": 8917,
+          "online_rpc_ns": 33899875,
+          "native_online_ns": 32710292,
+          "demand_at_ns": 620414203213333,
+          "readiness_finished_at_ns": 620414203247791,
+          "online_started_at_ns": 620414203357083,
+          "online_finished_at_ns": 620414237265875,
+          "http_started_at_ns": 620414237279333,
+          "response_received_at_ns": 620414285408791,
+          "request_readiness_segment_ns": 34458,
+          "request_context_segment_ns": 109292,
+          "request_online_bridge_segment_ns": 33908792,
+          "request_envelope_segment_ns": 13458,
+          "request_HTTP_segment_ns": 48129458,
+          "request_segment_sum_ns": 82195458,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1198500
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "run_analysis",
+        "units": 4,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-84",
+        "tool_result": {
+          "analysis_id": "analysis-001",
+          "dataset_id": "market-v1",
+          "document_count": 8,
+          "operation_count": 4,
+          "row_count": 16,
+          "summary": {
+            "maximum": 160,
+            "mean": 85.0,
+            "minimum": 10,
+            "sum": 1360
+          }
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "dataset_id": "market-v1",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620416455930583,
+          "token_ready_at_ns": 620405163607291,
+          "token_id": 4,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 4,
+          "tool": "run_analysis",
+          "units": 4,
+          "positions": [
+            569,
+            570,
+            571,
+            572
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620405111427375,
+          "started_at_ns": 620405111431458,
+          "ready_at_ns": 620405163607291,
+          "preparation_bridge_ns": 52175833,
+          "preparation_bridge_queue_ns": 583,
+          "native_preparation_ns": 51999042
+        },
+        "request_bytes": {
+          "request_body_bytes": 10424,
+          "request_line_bytes": 26,
+          "request_header_bytes": 345,
+          "http_sent_bytes": 10795,
+          "auth_envelope_bytes": 10037,
+          "native_token_bytes": 4971
+        },
+        "http_sent_bytes": 10795,
+        "request_body_bytes": 10424,
+        "native_token_bytes": 4971,
+        "auth_envelope_bytes": 10037,
+        "timing": {
+          "online_ns": 12384583,
+          "decode_ns": 6894458,
+          "native_round_ns": 37668166,
+          "request_body_bytes": 10424,
+          "server_verification_commit_ns": 39375000,
+          "state_backend_ns": 1557167,
+          "verification_ns": 30289208,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 23125,
+          "agent_critical_ns": 54339917,
+          "active_tool_ns": 54339917,
+          "request_latency_ns": 54316792,
+          "mcp_http_ns": 40829209,
+          "online_bridge_ns": 13378084,
+          "online_bridge_queue_ns": 4000,
+          "online_rpc_ns": 13374084,
+          "native_online_ns": 12384583,
+          "demand_at_ns": 620416455930583,
+          "readiness_finished_at_ns": 620416455953708,
+          "online_started_at_ns": 620416456048916,
+          "online_finished_at_ns": 620416469427000,
+          "http_started_at_ns": 620416469441291,
+          "response_received_at_ns": 620416510270500,
+          "request_readiness_segment_ns": 23125,
+          "request_context_segment_ns": 95208,
+          "request_online_bridge_segment_ns": 13378084,
+          "request_envelope_segment_ns": 14291,
+          "request_HTTP_segment_ns": 40829209,
+          "request_segment_sum_ns": 54339917,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 993501
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "export_report",
+        "units": 32,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-85",
+        "tool_result": {
+          "analysis_id": "analysis-001",
+          "complete": true,
+          "document_count": 8,
+          "report_id": "report-001",
+          "row_count": 16,
+          "section_count": 32,
+          "sections": [
+            {
+              "section": 1,
+              "status": "complete"
+            },
+            {
+              "section": 2,
+              "status": "complete"
+            },
+            {
+              "section": 3,
+              "status": "complete"
+            },
+            {
+              "section": 4,
+              "status": "complete"
+            },
+            {
+              "section": 5,
+              "status": "complete"
+            },
+            {
+              "section": 6,
+              "status": "complete"
+            },
+            {
+              "section": 7,
+              "status": "complete"
+            },
+            {
+              "section": 8,
+              "status": "complete"
+            },
+            {
+              "section": 9,
+              "status": "complete"
+            },
+            {
+              "section": 10,
+              "status": "complete"
+            },
+            {
+              "section": 11,
+              "status": "complete"
+            },
+            {
+              "section": 12,
+              "status": "complete"
+            },
+            {
+              "section": 13,
+              "status": "complete"
+            },
+            {
+              "section": 14,
+              "status": "complete"
+            },
+            {
+              "section": 15,
+              "status": "complete"
+            },
+            {
+              "section": 16,
+              "status": "complete"
+            },
+            {
+              "section": 17,
+              "status": "complete"
+            },
+            {
+              "section": 18,
+              "status": "complete"
+            },
+            {
+              "section": 19,
+              "status": "complete"
+            },
+            {
+              "section": 20,
+              "status": "complete"
+            },
+            {
+              "section": 21,
+              "status": "complete"
+            },
+            {
+              "section": 22,
+              "status": "complete"
+            },
+            {
+              "section": 23,
+              "status": "complete"
+            },
+            {
+              "section": 24,
+              "status": "complete"
+            },
+            {
+              "section": 25,
+              "status": "complete"
+            },
+            {
+              "section": 26,
+              "status": "complete"
+            },
+            {
+              "section": 27,
+              "status": "complete"
+            },
+            {
+              "section": 28,
+              "status": "complete"
+            },
+            {
+              "section": 29,
+              "status": "complete"
+            },
+            {
+              "section": 30,
+              "status": "complete"
+            },
+            {
+              "section": 31,
+              "status": "complete"
+            },
+            {
+              "section": 32,
+              "status": "complete"
+            }
+          ],
+          "summary": {
+            "maximum": 160,
+            "mean": 85.0,
+            "minimum": 10,
+            "sum": 1360
+          }
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "analysis_id": "analysis-001",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620495237426041,
+          "token_ready_at_ns": 620405376928541,
+          "token_id": 5,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 5,
+          "tool": "export_report",
+          "units": 32,
+          "positions": [
+            573,
+            574,
+            575,
+            576,
+            577,
+            578,
+            579,
+            580,
+            581,
+            582,
+            583,
+            584,
+            585,
+            586,
+            587,
+            588,
+            589,
+            590,
+            591,
+            592,
+            593,
+            594,
+            595,
+            596,
+            597,
+            598,
+            599,
+            600,
+            601,
+            602,
+            603,
+            604
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620405163614333,
+          "started_at_ns": 620405163617541,
+          "ready_at_ns": 620405376928541,
+          "preparation_bridge_ns": 213311000,
+          "preparation_bridge_queue_ns": 375,
+          "native_preparation_ns": 213124083
+        },
+        "request_bytes": {
+          "request_body_bytes": 28359,
+          "request_line_bytes": 26,
+          "request_header_bytes": 346,
+          "http_sent_bytes": 28731,
+          "auth_envelope_bytes": 27967,
+          "native_token_bytes": 13936
+        },
+        "http_sent_bytes": 28731,
+        "request_body_bytes": 28359,
+        "native_token_bytes": 13936,
+        "auth_envelope_bytes": 27967,
+        "timing": {
+          "online_ns": 49765875,
+          "decode_ns": 11113500,
+          "native_round_ns": 54062167,
+          "request_body_bytes": 28359,
+          "server_verification_commit_ns": 56115500,
+          "state_backend_ns": 1937667,
+          "verification_ns": 42495083,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 28250,
+          "agent_critical_ns": 109274292,
+          "active_tool_ns": 109274292,
+          "request_latency_ns": 109246042,
+          "mcp_http_ns": 58030708,
+          "online_bridge_ns": 51031042,
+          "online_bridge_queue_ns": 4833,
+          "online_rpc_ns": 51026209,
+          "native_online_ns": 49765875,
+          "demand_at_ns": 620495237426041,
+          "readiness_finished_at_ns": 620495237454291,
+          "online_started_at_ns": 620495237625708,
+          "online_finished_at_ns": 620495288656750,
+          "http_started_at_ns": 620495288669625,
+          "response_received_at_ns": 620495346700333,
+          "request_readiness_segment_ns": 28250,
+          "request_context_segment_ns": 171417,
+          "request_online_bridge_segment_ns": 51031042,
+          "request_envelope_segment_ns": 12875,
+          "request_HTTP_segment_ns": 58030708,
+          "request_segment_sum_ns": 109274292,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1265167
+        }
+      }
+    ],
+    "timing_steps": [
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 1,
+        "tool": "search_sources",
+        "units": 1,
+        "model_api_ns": 2851916792,
+        "darlt_critical_ns": 42602125,
+        "other_ns": 6276875,
+        "proof_path_inclusive_ns": 43750665,
+        "non_proof_path_ns": 5128335,
+        "online_ns": 6762542,
+        "decode_ns": 6440333,
+        "native_round_ns": 36433000,
+        "request_body_bytes": 8486,
+        "server_verification_commit_ns": 38689083,
+        "state_backend_ns": 2022541,
+        "verification_ns": 29399250,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 43291,
+        "agent_critical_ns": 48879000,
+        "active_tool_ns": 48879000,
+        "request_latency_ns": 48835709,
+        "mcp_http_ns": 40802834,
+        "online_bridge_ns": 7867791,
+        "online_bridge_queue_ns": 4333,
+        "online_rpc_ns": 7863458,
+        "native_online_ns": 6762542,
+        "demand_at_ns": 620408901077625,
+        "readiness_finished_at_ns": 620408901120916,
+        "online_started_at_ns": 620408901262125,
+        "online_finished_at_ns": 620408909129916,
+        "http_started_at_ns": 620408909153791,
+        "response_received_at_ns": 620408949956625,
+        "request_readiness_segment_ns": 43291,
+        "request_context_segment_ns": 141209,
+        "request_online_bridge_segment_ns": 7867791,
+        "request_envelope_segment_ns": 23875,
+        "request_HTTP_segment_ns": 40802834,
+        "request_segment_sum_ns": 48879000,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1105249,
+        "request_line_bytes": 26,
+        "request_header_bytes": 346,
+        "http_sent_bytes": 8858,
+        "auth_envelope_bytes": 8105,
+        "native_token_bytes": 4005,
+        "ready_before_demand": true
+      },
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 2,
+        "tool": "fetch_documents",
+        "units": 8,
+        "model_api_ns": 2130697291,
+        "darlt_critical_ns": 58446875,
+        "other_ns": 5690291,
+        "proof_path_inclusive_ns": 59504499,
+        "non_proof_path_ns": 4632667,
+        "online_ns": 19803709,
+        "decode_ns": 7212083,
+        "native_round_ns": 39155542,
+        "request_body_bytes": 13185,
+        "server_verification_commit_ns": 41607000,
+        "state_backend_ns": 2267708,
+        "verification_ns": 31431083,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 24166,
+        "agent_critical_ns": 64137166,
+        "active_tool_ns": 64137166,
+        "request_latency_ns": 64113000,
+        "mcp_http_ns": 43184083,
+        "online_bridge_ns": 20837167,
+        "online_bridge_queue_ns": 3458,
+        "online_rpc_ns": 20833709,
+        "native_online_ns": 19803709,
+        "demand_at_ns": 620411716251375,
+        "readiness_finished_at_ns": 620411716275541,
+        "online_started_at_ns": 620411716352458,
+        "online_finished_at_ns": 620411737189625,
+        "http_started_at_ns": 620411737204458,
+        "response_received_at_ns": 620411780388541,
+        "request_readiness_segment_ns": 24166,
+        "request_context_segment_ns": 76917,
+        "request_online_bridge_segment_ns": 20837167,
+        "request_envelope_segment_ns": 14833,
+        "request_HTTP_segment_ns": 43184083,
+        "request_segment_sum_ns": 64137166,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1033458,
+        "request_line_bytes": 26,
+        "request_header_bytes": 348,
+        "http_sent_bytes": 13559,
+        "auth_envelope_bytes": 12731,
+        "native_token_bytes": 6318,
+        "ready_before_demand": true
+      },
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 3,
+        "tool": "query_dataset",
+        "units": 16,
+        "model_api_ns": 1822270625,
+        "darlt_critical_ns": 76755250,
+        "other_ns": 5440208,
+        "proof_path_inclusive_ns": 77988208,
+        "non_proof_path_ns": 4207250,
+        "online_ns": 32710292,
+        "decode_ns": 8389958,
+        "native_round_ns": 44599792,
+        "request_body_bytes": 18107,
+        "server_verification_commit_ns": 46636625,
+        "state_backend_ns": 1922792,
+        "verification_ns": 35655000,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 34458,
+        "agent_critical_ns": 82195458,
+        "active_tool_ns": 82195458,
+        "request_latency_ns": 82161000,
+        "mcp_http_ns": 48129458,
+        "online_bridge_ns": 33908792,
+        "online_bridge_queue_ns": 8917,
+        "online_rpc_ns": 33899875,
+        "native_online_ns": 32710292,
+        "demand_at_ns": 620414203213333,
+        "readiness_finished_at_ns": 620414203247791,
+        "online_started_at_ns": 620414203357083,
+        "online_finished_at_ns": 620414237265875,
+        "http_started_at_ns": 620414237279333,
+        "response_received_at_ns": 620414285408791,
+        "request_readiness_segment_ns": 34458,
+        "request_context_segment_ns": 109292,
+        "request_online_bridge_segment_ns": 33908792,
+        "request_envelope_segment_ns": 13458,
+        "request_HTTP_segment_ns": 48129458,
+        "request_segment_sum_ns": 82195458,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1198500,
+        "request_line_bytes": 26,
+        "request_header_bytes": 346,
+        "http_sent_bytes": 18479,
+        "auth_envelope_bytes": 17719,
+        "native_token_bytes": 8812,
+        "ready_before_demand": true
+      },
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 4,
+        "tool": "run_analysis",
+        "units": 4,
+        "model_api_ns": 1529037542,
+        "darlt_critical_ns": 49568249,
+        "other_ns": 4771668,
+        "proof_path_inclusive_ns": 50584875,
+        "non_proof_path_ns": 3755042,
+        "online_ns": 12384583,
+        "decode_ns": 6894458,
+        "native_round_ns": 37668166,
+        "request_body_bytes": 10424,
+        "server_verification_commit_ns": 39375000,
+        "state_backend_ns": 1557167,
+        "verification_ns": 30289208,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 23125,
+        "agent_critical_ns": 54339917,
+        "active_tool_ns": 54339917,
+        "request_latency_ns": 54316792,
+        "mcp_http_ns": 40829209,
+        "online_bridge_ns": 13378084,
+        "online_bridge_queue_ns": 4000,
+        "online_rpc_ns": 13374084,
+        "native_online_ns": 12384583,
+        "demand_at_ns": 620416455930583,
+        "readiness_finished_at_ns": 620416455953708,
+        "online_started_at_ns": 620416456048916,
+        "online_finished_at_ns": 620416469427000,
+        "http_started_at_ns": 620416469441291,
+        "response_received_at_ns": 620416510270500,
+        "request_readiness_segment_ns": 23125,
+        "request_context_segment_ns": 95208,
+        "request_online_bridge_segment_ns": 13378084,
+        "request_envelope_segment_ns": 14291,
+        "request_HTTP_segment_ns": 40829209,
+        "request_segment_sum_ns": 54339917,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 993501,
+        "request_line_bytes": 26,
+        "request_header_bytes": 345,
+        "http_sent_bytes": 10795,
+        "auth_envelope_bytes": 10037,
+        "native_token_bytes": 4971,
+        "ready_before_demand": true
+      },
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 5,
+        "tool": "export_report",
+        "units": 32,
+        "model_api_ns": 78083610875,
+        "darlt_critical_ns": 103374458,
+        "other_ns": 5899834,
+        "proof_path_inclusive_ns": 104667875,
+        "non_proof_path_ns": 4606417,
+        "online_ns": 49765875,
+        "decode_ns": 11113500,
+        "native_round_ns": 54062167,
+        "request_body_bytes": 28359,
+        "server_verification_commit_ns": 56115500,
+        "state_backend_ns": 1937667,
+        "verification_ns": 42495083,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 28250,
+        "agent_critical_ns": 109274292,
+        "active_tool_ns": 109274292,
+        "request_latency_ns": 109246042,
+        "mcp_http_ns": 58030708,
+        "online_bridge_ns": 51031042,
+        "online_bridge_queue_ns": 4833,
+        "online_rpc_ns": 51026209,
+        "native_online_ns": 49765875,
+        "demand_at_ns": 620495237426041,
+        "readiness_finished_at_ns": 620495237454291,
+        "online_started_at_ns": 620495237625708,
+        "online_finished_at_ns": 620495288656750,
+        "http_started_at_ns": 620495288669625,
+        "response_received_at_ns": 620495346700333,
+        "request_readiness_segment_ns": 28250,
+        "request_context_segment_ns": 171417,
+        "request_online_bridge_segment_ns": 51031042,
+        "request_envelope_segment_ns": 12875,
+        "request_HTTP_segment_ns": 58030708,
+        "request_segment_sum_ns": 109274292,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1265167,
+        "request_line_bytes": 26,
+        "request_header_bytes": 346,
+        "http_sent_bytes": 28731,
+        "auth_envelope_bytes": 27967,
+        "native_token_bytes": 13936,
+        "ready_before_demand": true
+      },
+      {
+        "run": 16,
+        "workload": "research",
+        "step": 6,
+        "tool": "final_reply",
+        "units": 0,
+        "model_api_ns": 4992965084,
+        "darlt_critical_ns": 0,
+        "other_ns": 0,
+        "proof_path_inclusive_ns": 0,
+        "non_proof_path_ns": 0,
+        "agent_critical_ns": 0
+      }
+    ],
+    "model_records": [
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2851916792,
+        "model_api_start_ns": 620406047546458,
+        "model_api_end_ns": 620408899463250
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2130697291,
+        "model_api_start_ns": 620409584258625,
+        "model_api_end_ns": 620411714955916
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 1822270625,
+        "model_api_start_ns": 620412379642083,
+        "model_api_end_ns": 620414201912708
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 1529037542,
+        "model_api_start_ns": 620414925387291,
+        "model_api_end_ns": 620416454424833
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 78083610875,
+        "model_api_start_ns": 620417152269875,
+        "model_api_end_ns": 620495235880750
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 4992965084,
+        "model_api_start_ns": 620495981712416,
+        "model_api_end_ns": 620500974677500
+      }
+    ],
+    "final_reply": "The local market research workflow for **research-16** has been completed successfully.\n\n### Workflow Summary\n\n1. **Confirmed Report ID**: `report-001` (from analysis `analysis-001`, `complete: true`)\n\n2. **Eight Retrieved Documents**:\n   - `doc-01`: *Deterministic market evidence doc-01*\n   - `doc-02`: *Deterministic market evidence doc-02*\n   - `doc-03`: *Deterministic market evidence doc-03*\n   - `doc-04`: *Deterministic market evidence doc-04*\n   - `doc-05`: *Deterministic market evidence doc-05*\n   - `doc-06`: *Deterministic market evidence doc-06*\n   - `doc-07`: *Deterministic market evidence doc-07*\n   - `doc-08`: *Deterministic market evidence doc-08*\n\n3. **Sixteen Dataset Rows (`market-v1`)**:\n   - Row 1: `10`\n   - Row 2: `20`\n   - Row 3: `30`\n   - Row 4: `40`\n   - Row 5: `50`\n   - Row 6: `60`\n   - Row 7: `70`\n   - Row 8: `80`\n   - Row 9: `90`\n   - Row 10: `100`\n   - Row 11: `110`\n   - Row 12: `120`\n   - Row 13: `130`\n   - Row 14: `140`\n   - Row 15: `150`\n   - Row 16: `160`\n   *(Dataset Metrics: Sum = 1,360, Mean = 85, Min = 10, Max = 160)*\n\n4. **Thirty-Two Report Sections**:\n   - Sections 1 through 32 were all generated and confirmed with status: `complete`.",
+    "scope_accounting": {
+      "steps": 5,
+      "reserved_units": 61,
+      "spent_units": 61,
+      "expected_units": 61
+    },
+    "before": {
+      "effects": 0,
+      "bookings": 10,
+      "consumed": 0,
+      "remaining": null,
+      "research": {
+        "stage": 0,
+        "documents": 0,
+        "rows": 0,
+        "report_complete": 0
+      }
+    },
+    "after": {
+      "effects": 5,
+      "bookings": 10,
+      "consumed": 61,
+      "remaining": null,
+      "research": {
+        "stage": 5,
+        "documents": 8,
+        "rows": 16,
+        "report_complete": 1
+      }
+    },
+    "trace": [
+      {
+        "tool": "search_sources",
+        "arguments": {
+          "query": "market",
+          "resource": "inventory/allowed"
+        },
+        "units": 1
+      },
+      {
+        "tool": "fetch_documents",
+        "arguments": {
+          "document_ids": [
+            "doc-01",
+            "doc-02",
+            "doc-03",
+            "doc-04",
+            "doc-05",
+            "doc-06",
+            "doc-07",
+            "doc-08"
+          ],
+          "resource": "inventory/allowed"
+        },
+        "units": 8
+      },
+      {
+        "tool": "query_dataset",
+        "arguments": {
+          "dataset_id": "market-v1",
+          "resource": "inventory/allowed"
+        },
+        "units": 16
+      },
+      {
+        "tool": "run_analysis",
+        "arguments": {
+          "dataset_id": "market-v1",
+          "resource": "inventory/allowed"
+        },
+        "units": 4
+      },
+      {
+        "tool": "export_report",
+        "arguments": {
+          "analysis_id": "analysis-001",
+          "resource": "inventory/allowed"
+        },
+        "units": 32
+      }
+    ]
+  }
+}

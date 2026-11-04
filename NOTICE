@@ -1,0 +1,19 @@
+RP23 compact and divisible e-cash
+
+The implementations in ecash/rp23 are adapted from TI-OfflineEcash by
+Alfredo Rial and Ania M. Piotrowska, under Apache License 2.0.
+https://github.com/aniampio/TI-OfflineEcash
+Commit: 638ac24662b32da4b86124b742392650e57521e1
+The adaptation uses blstrs group arithmetic, wire codecs, role adapters,
+batch verification and shared state. The upstream license is retained in
+ecash/rp23/LICENSE.
+
+LCB24 circuit and Schnorr modules
+
+ecash/lcb24/fetch_sources.py retrieves four modules from private-billing
+and checks their pinned SHA-256 hashes before compilation.
+https://github.com/kev-liao/private-billing
+Commit: 5dfbf5609ba528be31e6a50ebce0f49037bdb159
+The retrieved modules reside in the local source-cache directory.
+The Arkworks gadget dependencies are pinned to commit
+8113b8faa2b71cd8ffdc6642db9e84236fb4cb85 in the manifests and lockfile.

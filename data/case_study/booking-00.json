@@ -1,0 +1,1257 @@
+{
+  "trace_id": "booking-00",
+  "workload": "booking",
+  "pools": [
+    0
+  ],
+  "workflow": {
+    "run": 0,
+    "workload": "booking",
+    "mode": "darlt",
+    "passed": true,
+    "preparations_during_workflow_count": 2,
+    "scripted_execution": false,
+    "all_prepared_before_workflow": false,
+    "initial_preparation": {
+      "prepared_tools": [
+        "search_inventory",
+        "get_details",
+        "book_item"
+      ],
+      "prepared_entry_count": 3,
+      "prepared_token_count": 3,
+      "reserved_unit_count": 6,
+      "jobs": [
+        {
+          "token_id": 1,
+          "tool": "search_inventory",
+          "units": 1,
+          "positions": [
+            0
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063094181208,
+          "started_at_ns": 620063094187833,
+          "ready_at_ns": 620063130109708,
+          "preparation_bridge_ns": 35921875,
+          "preparation_bridge_queue_ns": 792,
+          "native_preparation_ns": 35671500
+        },
+        {
+          "token_id": 2,
+          "tool": "get_details",
+          "units": 1,
+          "positions": [
+            1
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063130118458,
+          "started_at_ns": 620063130122500,
+          "ready_at_ns": 620063165746000,
+          "preparation_bridge_ns": 35623500,
+          "preparation_bridge_queue_ns": 750,
+          "native_preparation_ns": 35493958
+        },
+        {
+          "token_id": 3,
+          "tool": "book_item",
+          "units": 4,
+          "positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063165751750,
+          "started_at_ns": 620063165755958,
+          "ready_at_ns": 620063217234875,
+          "preparation_bridge_ns": 51478917,
+          "preparation_bridge_queue_ns": 333,
+          "native_preparation_ns": 51358166
+        }
+      ],
+      "initial_preparation_ns": 123065583,
+      "initial_native_preparation_ns": 122523624,
+      "started_at_ns": 620063094173625,
+      "finished_at_ns": 620063217239208
+    },
+    "preparations": [
+      {
+        "token_id": 1,
+        "tool": "search_inventory",
+        "units": 1,
+        "positions": [
+          0
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620063094181208,
+        "started_at_ns": 620063094187833,
+        "ready_at_ns": 620063130109708,
+        "preparation_bridge_ns": 35921875,
+        "preparation_bridge_queue_ns": 792,
+        "native_preparation_ns": 35671500
+      },
+      {
+        "token_id": 2,
+        "tool": "get_details",
+        "units": 1,
+        "positions": [
+          1
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620063130118458,
+        "started_at_ns": 620063130122500,
+        "ready_at_ns": 620063165746000,
+        "preparation_bridge_ns": 35623500,
+        "preparation_bridge_queue_ns": 750,
+        "native_preparation_ns": 35493958
+      },
+      {
+        "token_id": 3,
+        "tool": "book_item",
+        "units": 4,
+        "positions": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "initial",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620063165751750,
+        "started_at_ns": 620063165755958,
+        "ready_at_ns": 620063217234875,
+        "preparation_bridge_ns": 51478917,
+        "preparation_bridge_queue_ns": 333,
+        "native_preparation_ns": 51358166
+      },
+      {
+        "token_id": 4,
+        "tool": "search_inventory",
+        "units": 1,
+        "positions": [
+          6
+        ],
+        "reason": "replenishment",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620066824086000,
+        "started_at_ns": 620067429461708,
+        "ready_at_ns": 620067492112708,
+        "preparation_bridge_ns": 62651000,
+        "preparation_bridge_queue_ns": 6125,
+        "native_preparation_ns": 61639375
+      },
+      {
+        "token_id": 5,
+        "tool": "get_details",
+        "units": 1,
+        "positions": [
+          7
+        ],
+        "reason": "replenishment",
+        "workflow_epoch": 0,
+        "scheduled_at_ns": 620069297739000,
+        "started_at_ns": 620069921652458,
+        "ready_at_ns": 620069984647333,
+        "preparation_bridge_ns": 62994875,
+        "preparation_bridge_queue_ns": 4083,
+        "native_preparation_ns": 61662375
+      }
+    ],
+    "events": [
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620063094181208,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_inventory",
+        "units": 1,
+        "positions": [
+          0
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620063094181208
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620063094185916,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620063130109708,
+        "workflow_epoch": 0,
+        "token_id": 1,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620063130118458,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "get_details",
+        "units": 1,
+        "positions": [
+          1
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620063130118458
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620063130121375,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "get_details"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620063165746000,
+        "workflow_epoch": 0,
+        "token_id": 2,
+        "tool": "get_details"
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620063165751750,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "book_item",
+        "units": 4,
+        "positions": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "initial",
+        "scheduled_at_ns": 620063165751750
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620063165754666,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "book_item"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620063217234875,
+        "workflow_epoch": 0,
+        "token_id": 3,
+        "tool": "book_item"
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620066774575833,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620066782680875,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_inventory",
+        "token_id": 1
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620066824063250,
+        "workflow_epoch": 0,
+        "step": 0,
+        "tool": "search_inventory",
+        "positions": [
+          0
+        ],
+        "token_id": 1
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620066824086000,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "search_inventory",
+        "units": 1,
+        "positions": [
+          6
+        ],
+        "reason": "replenishment",
+        "scheduled_at_ns": 620066824086000
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620067428067500,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620067492112708,
+        "workflow_epoch": 0,
+        "token_id": 4,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620069248025208,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "get_details"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620069256322875,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "get_details",
+        "token_id": 2
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620069297706125,
+        "workflow_epoch": 0,
+        "step": 1,
+        "tool": "get_details",
+        "positions": [
+          1
+        ],
+        "token_id": 2
+      },
+      {
+        "event": "prepare_scheduled",
+        "at_ns": 620069297739000,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "get_details",
+        "units": 1,
+        "positions": [
+          7
+        ],
+        "reason": "replenishment",
+        "scheduled_at_ns": 620069297739000
+      },
+      {
+        "event": "prepare_started",
+        "at_ns": 620069921642333,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "get_details"
+      },
+      {
+        "event": "prepare_ready",
+        "at_ns": 620069984647333,
+        "workflow_epoch": 0,
+        "token_id": 5,
+        "tool": "get_details"
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620072376455750,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "book_item"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620072389483583,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "book_item",
+        "token_id": 3
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620072430488958,
+        "workflow_epoch": 0,
+        "step": 2,
+        "tool": "book_item",
+        "positions": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "token_id": 3
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620075599603666,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "get_details"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620075607413166,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "get_details",
+        "token_id": 5
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620075647753791,
+        "workflow_epoch": 0,
+        "step": 3,
+        "tool": "get_details",
+        "positions": [
+          7
+        ],
+        "token_id": 5
+      },
+      {
+        "event": "token_demand",
+        "at_ns": 620078104172708,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "search_inventory"
+      },
+      {
+        "event": "online_finished",
+        "at_ns": 620078112209375,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "search_inventory",
+        "token_id": 4
+      },
+      {
+        "event": "token_consumed",
+        "at_ns": 620078152348458,
+        "workflow_epoch": 0,
+        "step": 4,
+        "tool": "search_inventory",
+        "positions": [
+          6
+        ],
+        "token_id": 4
+      }
+    ],
+    "steps": [
+      {
+        "mode": "darlt",
+        "tool": "search_inventory",
+        "units": 1,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-1",
+        "tool_result": {
+          "items": [
+            {
+              "bookings": 0,
+              "item_id": "hotel-101",
+              "name": "Local Hotel"
+            }
+          ]
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "query": "hotel",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620066774575833,
+          "token_ready_at_ns": 620063130109708,
+          "token_id": 1,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 1,
+          "tool": "search_inventory",
+          "units": 1,
+          "positions": [
+            0
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063094181208,
+          "started_at_ns": 620063094187833,
+          "ready_at_ns": 620063130109708,
+          "preparation_bridge_ns": 35921875,
+          "preparation_bridge_queue_ns": 792,
+          "native_preparation_ns": 35671500
+        },
+        "request_bytes": {
+          "request_body_bytes": 8489,
+          "request_line_bytes": 26,
+          "request_header_bytes": 348,
+          "http_sent_bytes": 8863,
+          "auth_envelope_bytes": 8107,
+          "native_token_bytes": 4006
+        },
+        "http_sent_bytes": 8863,
+        "request_body_bytes": 8489,
+        "native_token_bytes": 4006,
+        "auth_envelope_bytes": 8107,
+        "timing": {
+          "online_ns": 6704541,
+          "decode_ns": 6202625,
+          "native_round_ns": 37247209,
+          "request_body_bytes": 8489,
+          "server_verification_commit_ns": 39790708,
+          "state_backend_ns": 2199750,
+          "verification_ns": 30605125,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 37417,
+          "agent_critical_ns": 49487417,
+          "active_tool_ns": 49487417,
+          "request_latency_ns": 49450000,
+          "mcp_http_ns": 41361250,
+          "online_bridge_ns": 7904834,
+          "online_bridge_queue_ns": 6084,
+          "online_rpc_ns": 7898750,
+          "native_online_ns": 6704541,
+          "demand_at_ns": 620066774575833,
+          "readiness_finished_at_ns": 620066774613250,
+          "online_started_at_ns": 620066774776041,
+          "online_finished_at_ns": 620066782680875,
+          "http_started_at_ns": 620066782702000,
+          "response_received_at_ns": 620066824063250,
+          "request_readiness_segment_ns": 37417,
+          "request_context_segment_ns": 162791,
+          "request_online_bridge_segment_ns": 7904834,
+          "request_envelope_segment_ns": 21125,
+          "request_HTTP_segment_ns": 41361250,
+          "request_segment_sum_ns": 49487417,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1200293
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "get_details",
+        "units": 1,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-2",
+        "tool_result": {
+          "bookings": 0,
+          "item_id": "hotel-101",
+          "name": "Local Hotel"
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "item_id": "hotel-101",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620069248025208,
+          "token_ready_at_ns": 620063165746000,
+          "token_id": 2,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 2,
+          "tool": "get_details",
+          "units": 1,
+          "positions": [
+            1
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063130118458,
+          "started_at_ns": 620063130122500,
+          "ready_at_ns": 620063165746000,
+          "preparation_bridge_ns": 35623500,
+          "preparation_bridge_queue_ns": 750,
+          "native_preparation_ns": 35493958
+        },
+        "request_bytes": {
+          "request_body_bytes": 8492,
+          "request_line_bytes": 26,
+          "request_header_bytes": 343,
+          "http_sent_bytes": 8861,
+          "auth_envelope_bytes": 8109,
+          "native_token_bytes": 4007
+        },
+        "http_sent_bytes": 8861,
+        "request_body_bytes": 8492,
+        "native_token_bytes": 4007,
+        "auth_envelope_bytes": 8109,
+        "timing": {
+          "online_ns": 6936250,
+          "decode_ns": 6460583,
+          "native_round_ns": 37149167,
+          "request_body_bytes": 8492,
+          "server_verification_commit_ns": 39391833,
+          "state_backend_ns": 2012583,
+          "verification_ns": 30119292,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 34167,
+          "agent_critical_ns": 49680917,
+          "active_tool_ns": 49680917,
+          "request_latency_ns": 49646750,
+          "mcp_http_ns": 41364250,
+          "online_bridge_ns": 8156750,
+          "online_bridge_queue_ns": 6625,
+          "online_rpc_ns": 8150125,
+          "native_online_ns": 6936250,
+          "demand_at_ns": 620069248025208,
+          "readiness_finished_at_ns": 620069248059375,
+          "online_started_at_ns": 620069248166125,
+          "online_finished_at_ns": 620069256322875,
+          "http_started_at_ns": 620069256341875,
+          "response_received_at_ns": 620069297706125,
+          "request_readiness_segment_ns": 34167,
+          "request_context_segment_ns": 106750,
+          "request_online_bridge_segment_ns": 8156750,
+          "request_envelope_segment_ns": 19000,
+          "request_HTTP_segment_ns": 41364250,
+          "request_segment_sum_ns": 49680917,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1220500
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "book_item",
+        "units": 4,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-3",
+        "tool_result": {
+          "booking_id": 1,
+          "customer": "synthetic-customer-0",
+          "item_id": "hotel-101"
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "item_id": "hotel-101",
+          "customer": "synthetic-customer-0",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620072376455750,
+          "token_ready_at_ns": 620063217234875,
+          "token_id": 3,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 3,
+          "tool": "book_item",
+          "units": 4,
+          "positions": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "reason": "initial",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620063165751750,
+          "started_at_ns": 620063165755958,
+          "ready_at_ns": 620063217234875,
+          "preparation_bridge_ns": 51478917,
+          "preparation_bridge_queue_ns": 333,
+          "native_preparation_ns": 51358166
+        },
+        "request_bytes": {
+          "request_body_bytes": 10508,
+          "request_line_bytes": 26,
+          "request_header_bytes": 342,
+          "http_sent_bytes": 10876,
+          "auth_envelope_bytes": 10093,
+          "native_token_bytes": 4999
+        },
+        "http_sent_bytes": 10876,
+        "request_body_bytes": 10508,
+        "native_token_bytes": 4999,
+        "auth_envelope_bytes": 10093,
+        "timing": {
+          "online_ns": 11711667,
+          "decode_ns": 6696584,
+          "native_round_ns": 37436708,
+          "request_body_bytes": 10508,
+          "server_verification_commit_ns": 39363709,
+          "state_backend_ns": 1773292,
+          "verification_ns": 30186208,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 27916,
+          "agent_critical_ns": 54033208,
+          "active_tool_ns": 54033208,
+          "request_latency_ns": 54005292,
+          "mcp_http_ns": 40987542,
+          "online_bridge_ns": 12861500,
+          "online_bridge_queue_ns": 5167,
+          "online_rpc_ns": 12856333,
+          "native_online_ns": 11711667,
+          "demand_at_ns": 620072376455750,
+          "readiness_finished_at_ns": 620072376483666,
+          "online_started_at_ns": 620072376622083,
+          "online_finished_at_ns": 620072389483583,
+          "http_started_at_ns": 620072389501416,
+          "response_received_at_ns": 620072430488958,
+          "request_readiness_segment_ns": 27916,
+          "request_context_segment_ns": 138417,
+          "request_online_bridge_segment_ns": 12861500,
+          "request_envelope_segment_ns": 17833,
+          "request_HTTP_segment_ns": 40987542,
+          "request_segment_sum_ns": 54033208,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1149833
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "get_details",
+        "units": 1,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-4",
+        "tool_result": {
+          "bookings": 1,
+          "item_id": "hotel-101",
+          "name": "Local Hotel"
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "item_id": "hotel-101",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620075599603666,
+          "token_ready_at_ns": 620069984647333,
+          "token_id": 5,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 5,
+          "tool": "get_details",
+          "units": 1,
+          "positions": [
+            7
+          ],
+          "reason": "replenishment",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620069297739000,
+          "started_at_ns": 620069921652458,
+          "ready_at_ns": 620069984647333,
+          "preparation_bridge_ns": 62994875,
+          "preparation_bridge_queue_ns": 4083,
+          "native_preparation_ns": 61662375
+        },
+        "request_bytes": {
+          "request_body_bytes": 8492,
+          "request_line_bytes": 26,
+          "request_header_bytes": 343,
+          "http_sent_bytes": 8861,
+          "auth_envelope_bytes": 8109,
+          "native_token_bytes": 4007
+        },
+        "http_sent_bytes": 8861,
+        "request_body_bytes": 8492,
+        "native_token_bytes": 4007,
+        "auth_envelope_bytes": 8109,
+        "timing": {
+          "online_ns": 6606000,
+          "decode_ns": 6420667,
+          "native_round_ns": 36291834,
+          "request_body_bytes": 8492,
+          "server_verification_commit_ns": 38612166,
+          "state_backend_ns": 2117833,
+          "verification_ns": 29412750,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 53000,
+          "agent_critical_ns": 48150125,
+          "active_tool_ns": 48150125,
+          "request_latency_ns": 48097125,
+          "mcp_http_ns": 40325083,
+          "online_bridge_ns": 7679833,
+          "online_bridge_queue_ns": 3667,
+          "online_rpc_ns": 7676166,
+          "native_online_ns": 6606000,
+          "demand_at_ns": 620075599603666,
+          "readiness_finished_at_ns": 620075599656666,
+          "online_started_at_ns": 620075599733333,
+          "online_finished_at_ns": 620075607413166,
+          "http_started_at_ns": 620075607428708,
+          "response_received_at_ns": 620075647753791,
+          "request_readiness_segment_ns": 53000,
+          "request_context_segment_ns": 76667,
+          "request_online_bridge_segment_ns": 7679833,
+          "request_envelope_segment_ns": 15542,
+          "request_HTTP_segment_ns": 40325083,
+          "request_segment_sum_ns": 48150125,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1073833
+        }
+      },
+      {
+        "mode": "darlt",
+        "tool": "search_inventory",
+        "units": 1,
+        "http_requests": 1,
+        "accepted": true,
+        "evidence_handle": "evidence-5",
+        "tool_result": {
+          "items": [
+            {
+              "bookings": 1,
+              "item_id": "hotel-101",
+              "name": "Local Hotel"
+            }
+          ]
+        },
+        "verifier_id": "bank-A",
+        "arguments": {
+          "query": "hotel",
+          "resource": "inventory/allowed"
+        },
+        "readiness": {
+          "ready_before_demand": true,
+          "demand_at_ns": 620078104172708,
+          "token_ready_at_ns": 620067492112708,
+          "token_id": 4,
+          "future_wait_ns": 0
+        },
+        "prepared_token": {
+          "token_id": 4,
+          "tool": "search_inventory",
+          "units": 1,
+          "positions": [
+            6
+          ],
+          "reason": "replenishment",
+          "workflow_epoch": 0,
+          "scheduled_at_ns": 620066824086000,
+          "started_at_ns": 620067429461708,
+          "ready_at_ns": 620067492112708,
+          "preparation_bridge_ns": 62651000,
+          "preparation_bridge_queue_ns": 6125,
+          "native_preparation_ns": 61639375
+        },
+        "request_bytes": {
+          "request_body_bytes": 8489,
+          "request_line_bytes": 26,
+          "request_header_bytes": 348,
+          "http_sent_bytes": 8863,
+          "auth_envelope_bytes": 8107,
+          "native_token_bytes": 4006
+        },
+        "http_sent_bytes": 8863,
+        "request_body_bytes": 8489,
+        "native_token_bytes": 4006,
+        "auth_envelope_bytes": 8107,
+        "timing": {
+          "online_ns": 6893708,
+          "decode_ns": 6299042,
+          "native_round_ns": 36756083,
+          "request_body_bytes": 8489,
+          "server_verification_commit_ns": 38527375,
+          "state_backend_ns": 1623834,
+          "verification_ns": 30009167,
+          "future_wait_ns": 0,
+          "readiness_gate_ns": 49083,
+          "agent_critical_ns": 48175750,
+          "active_tool_ns": 48175750,
+          "request_latency_ns": 48126667,
+          "mcp_http_ns": 40122125,
+          "online_bridge_ns": 7895834,
+          "online_bridge_queue_ns": 3542,
+          "online_rpc_ns": 7892292,
+          "native_online_ns": 6893708,
+          "demand_at_ns": 620078104172708,
+          "readiness_finished_at_ns": 620078104221791,
+          "online_started_at_ns": 620078104313541,
+          "online_finished_at_ns": 620078112209375,
+          "http_started_at_ns": 620078112226333,
+          "response_received_at_ns": 620078152348458,
+          "request_readiness_segment_ns": 49083,
+          "request_context_segment_ns": 91750,
+          "request_online_bridge_segment_ns": 7895834,
+          "request_envelope_segment_ns": 16958,
+          "request_HTTP_segment_ns": 40122125,
+          "request_segment_sum_ns": 48175750,
+          "request_segment_residual_ns": 0,
+          "online_adapter_ns": 1002126
+        }
+      }
+    ],
+    "timing_steps": [
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 1,
+        "tool": "search_inventory",
+        "units": 1,
+        "model_api_ns": 2355341250,
+        "darlt_critical_ns": 43512291,
+        "other_ns": 5975126,
+        "proof_path_inclusive_ns": 44750001,
+        "non_proof_path_ns": 4737416,
+        "online_ns": 6704541,
+        "decode_ns": 6202625,
+        "native_round_ns": 37247209,
+        "request_body_bytes": 8489,
+        "server_verification_commit_ns": 39790708,
+        "state_backend_ns": 2199750,
+        "verification_ns": 30605125,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 37417,
+        "agent_critical_ns": 49487417,
+        "active_tool_ns": 49487417,
+        "request_latency_ns": 49450000,
+        "mcp_http_ns": 41361250,
+        "online_bridge_ns": 7904834,
+        "online_bridge_queue_ns": 6084,
+        "online_rpc_ns": 7898750,
+        "native_online_ns": 6704541,
+        "demand_at_ns": 620066774575833,
+        "readiness_finished_at_ns": 620066774613250,
+        "online_started_at_ns": 620066774776041,
+        "online_finished_at_ns": 620066782680875,
+        "http_started_at_ns": 620066782702000,
+        "response_received_at_ns": 620066824063250,
+        "request_readiness_segment_ns": 37417,
+        "request_context_segment_ns": 162791,
+        "request_online_bridge_segment_ns": 7904834,
+        "request_envelope_segment_ns": 21125,
+        "request_HTTP_segment_ns": 41361250,
+        "request_segment_sum_ns": 49487417,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1200293,
+        "request_line_bytes": 26,
+        "request_header_bytes": 348,
+        "http_sent_bytes": 8863,
+        "auth_envelope_bytes": 8107,
+        "native_token_bytes": 4006,
+        "ready_before_demand": true
+      },
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 2,
+        "tool": "get_details",
+        "units": 1,
+        "model_api_ns": 1819128125,
+        "darlt_critical_ns": 43516125,
+        "other_ns": 6164792,
+        "proof_path_inclusive_ns": 44770792,
+        "non_proof_path_ns": 4910125,
+        "online_ns": 6936250,
+        "decode_ns": 6460583,
+        "native_round_ns": 37149167,
+        "request_body_bytes": 8492,
+        "server_verification_commit_ns": 39391833,
+        "state_backend_ns": 2012583,
+        "verification_ns": 30119292,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 34167,
+        "agent_critical_ns": 49680917,
+        "active_tool_ns": 49680917,
+        "request_latency_ns": 49646750,
+        "mcp_http_ns": 41364250,
+        "online_bridge_ns": 8156750,
+        "online_bridge_queue_ns": 6625,
+        "online_rpc_ns": 8150125,
+        "native_online_ns": 6936250,
+        "demand_at_ns": 620069248025208,
+        "readiness_finished_at_ns": 620069248059375,
+        "online_started_at_ns": 620069248166125,
+        "online_finished_at_ns": 620069256322875,
+        "http_started_at_ns": 620069256341875,
+        "response_received_at_ns": 620069297706125,
+        "request_readiness_segment_ns": 34167,
+        "request_context_segment_ns": 106750,
+        "request_online_bridge_segment_ns": 8156750,
+        "request_envelope_segment_ns": 19000,
+        "request_HTTP_segment_ns": 41364250,
+        "request_segment_sum_ns": 49680917,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1220500,
+        "request_line_bytes": 26,
+        "request_header_bytes": 343,
+        "http_sent_bytes": 8861,
+        "auth_envelope_bytes": 8109,
+        "native_token_bytes": 4007,
+        "ready_before_demand": true
+      },
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 3,
+        "tool": "book_item",
+        "units": 4,
+        "model_api_ns": 2454593833,
+        "darlt_critical_ns": 48594459,
+        "other_ns": 5438749,
+        "proof_path_inclusive_ns": 49772208,
+        "non_proof_path_ns": 4261000,
+        "online_ns": 11711667,
+        "decode_ns": 6696584,
+        "native_round_ns": 37436708,
+        "request_body_bytes": 10508,
+        "server_verification_commit_ns": 39363709,
+        "state_backend_ns": 1773292,
+        "verification_ns": 30186208,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 27916,
+        "agent_critical_ns": 54033208,
+        "active_tool_ns": 54033208,
+        "request_latency_ns": 54005292,
+        "mcp_http_ns": 40987542,
+        "online_bridge_ns": 12861500,
+        "online_bridge_queue_ns": 5167,
+        "online_rpc_ns": 12856333,
+        "native_online_ns": 11711667,
+        "demand_at_ns": 620072376455750,
+        "readiness_finished_at_ns": 620072376483666,
+        "online_started_at_ns": 620072376622083,
+        "online_finished_at_ns": 620072389483583,
+        "http_started_at_ns": 620072389501416,
+        "response_received_at_ns": 620072430488958,
+        "request_readiness_segment_ns": 27916,
+        "request_context_segment_ns": 138417,
+        "request_online_bridge_segment_ns": 12861500,
+        "request_envelope_segment_ns": 17833,
+        "request_HTTP_segment_ns": 40987542,
+        "request_segment_sum_ns": 54033208,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1149833,
+        "request_line_bytes": 26,
+        "request_header_bytes": 342,
+        "http_sent_bytes": 10876,
+        "auth_envelope_bytes": 10093,
+        "native_token_bytes": 4999,
+        "ready_before_demand": true
+      },
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 4,
+        "tool": "get_details",
+        "units": 1,
+        "model_api_ns": 2547720958,
+        "darlt_critical_ns": 42439417,
+        "other_ns": 5710708,
+        "proof_path_inclusive_ns": 43566250,
+        "non_proof_path_ns": 4583875,
+        "online_ns": 6606000,
+        "decode_ns": 6420667,
+        "native_round_ns": 36291834,
+        "request_body_bytes": 8492,
+        "server_verification_commit_ns": 38612166,
+        "state_backend_ns": 2117833,
+        "verification_ns": 29412750,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 53000,
+        "agent_critical_ns": 48150125,
+        "active_tool_ns": 48150125,
+        "request_latency_ns": 48097125,
+        "mcp_http_ns": 40325083,
+        "online_bridge_ns": 7679833,
+        "online_bridge_queue_ns": 3667,
+        "online_rpc_ns": 7676166,
+        "native_online_ns": 6606000,
+        "demand_at_ns": 620075599603666,
+        "readiness_finished_at_ns": 620075599656666,
+        "online_started_at_ns": 620075599733333,
+        "online_finished_at_ns": 620075607413166,
+        "http_started_at_ns": 620075607428708,
+        "response_received_at_ns": 620075647753791,
+        "request_readiness_segment_ns": 53000,
+        "request_context_segment_ns": 76667,
+        "request_online_bridge_segment_ns": 7679833,
+        "request_envelope_segment_ns": 15542,
+        "request_HTTP_segment_ns": 40325083,
+        "request_segment_sum_ns": 48150125,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1073833,
+        "request_line_bytes": 26,
+        "request_header_bytes": 343,
+        "http_sent_bytes": 8861,
+        "auth_envelope_bytes": 8109,
+        "native_token_bytes": 4007,
+        "ready_before_demand": true
+      },
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 5,
+        "tool": "search_inventory",
+        "units": 1,
+        "model_api_ns": 1841541750,
+        "darlt_critical_ns": 43201917,
+        "other_ns": 4973833,
+        "proof_path_inclusive_ns": 44253126,
+        "non_proof_path_ns": 3922624,
+        "online_ns": 6893708,
+        "decode_ns": 6299042,
+        "native_round_ns": 36756083,
+        "request_body_bytes": 8489,
+        "server_verification_commit_ns": 38527375,
+        "state_backend_ns": 1623834,
+        "verification_ns": 30009167,
+        "future_wait_ns": 0,
+        "readiness_gate_ns": 49083,
+        "agent_critical_ns": 48175750,
+        "active_tool_ns": 48175750,
+        "request_latency_ns": 48126667,
+        "mcp_http_ns": 40122125,
+        "online_bridge_ns": 7895834,
+        "online_bridge_queue_ns": 3542,
+        "online_rpc_ns": 7892292,
+        "native_online_ns": 6893708,
+        "demand_at_ns": 620078104172708,
+        "readiness_finished_at_ns": 620078104221791,
+        "online_started_at_ns": 620078104313541,
+        "online_finished_at_ns": 620078112209375,
+        "http_started_at_ns": 620078112226333,
+        "response_received_at_ns": 620078152348458,
+        "request_readiness_segment_ns": 49083,
+        "request_context_segment_ns": 91750,
+        "request_online_bridge_segment_ns": 7895834,
+        "request_envelope_segment_ns": 16958,
+        "request_HTTP_segment_ns": 40122125,
+        "request_segment_sum_ns": 48175750,
+        "request_segment_residual_ns": 0,
+        "online_adapter_ns": 1002126,
+        "request_line_bytes": 26,
+        "request_header_bytes": 348,
+        "http_sent_bytes": 8863,
+        "auth_envelope_bytes": 8107,
+        "native_token_bytes": 4006,
+        "ready_before_demand": true
+      },
+      {
+        "run": 0,
+        "workload": "booking",
+        "step": 6,
+        "tool": "final_reply",
+        "units": 0,
+        "model_api_ns": 2802196791,
+        "darlt_critical_ns": 0,
+        "other_ns": 0,
+        "proof_path_inclusive_ns": 0,
+        "non_proof_path_ns": 0,
+        "agent_critical_ns": 0
+      }
+    ],
+    "model_records": [
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2355341250,
+        "model_api_start_ns": 620064417193958,
+        "model_api_end_ns": 620066772535208
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 1819128125,
+        "model_api_start_ns": 620067427374416,
+        "model_api_end_ns": 620069246502541
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2454593833,
+        "model_api_start_ns": 620069920668375,
+        "model_api_end_ns": 620072375262208
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2547720958,
+        "model_api_start_ns": 620073050370333,
+        "model_api_end_ns": 620075598091291
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 1841541750,
+        "model_api_start_ns": 620076261510708,
+        "model_api_end_ns": 620078103052458
+      },
+      {
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "provider_route": "google-vertex/global",
+        "model_api_ns": 2802196791,
+        "model_api_start_ns": 620078764276750,
+        "model_api_end_ns": 620081566473541
+      }
+    ],
+    "final_reply": "### Summary of Confirmed Booking\n\n1. **Initial Search & Inspection:**\n   - **Hotel ID:** `hotel-101` (`Local Hotel`)\n   - **Initial Booking Count:** `0`\n\n2. **Booking Details:**\n   - **Booking ID:** `1`\n   - **Customer:** `synthetic-customer-0`\n   - **Hotel ID:** `hotel-101`\n\n3. **Verification:**\n   - Post-booking inspection confirmed the booking count increased by one (from `0` to `1`).\n   - Final search verified `hotel-101` reflecting `1` booking in inventory.",
+    "scope_accounting": {
+      "steps": 5,
+      "reserved_units": 8,
+      "spent_units": 8,
+      "expected_units": 8
+    },
+    "before": {
+      "effects": 0,
+      "bookings": 0,
+      "consumed": 0,
+      "remaining": null
+    },
+    "after": {
+      "effects": 5,
+      "bookings": 1,
+      "consumed": 8,
+      "remaining": null
+    },
+    "trace": [
+      {
+        "tool": "search_inventory",
+        "arguments": {
+          "query": "hotel",
+          "resource": "inventory/allowed"
+        },
+        "units": 1
+      },
+      {
+        "tool": "get_details",
+        "arguments": {
+          "item_id": "hotel-101",
+          "resource": "inventory/allowed"
+        },
+        "units": 1
+      },
+      {
+        "tool": "book_item",
+        "arguments": {
+          "item_id": "hotel-101",
+          "customer": "synthetic-customer-0",
+          "resource": "inventory/allowed"
+        },
+        "units": 4
+      },
+      {
+        "tool": "get_details",
+        "arguments": {
+          "item_id": "hotel-101",
+          "resource": "inventory/allowed"
+        },
+        "units": 1
+      },
+      {
+        "tool": "search_inventory",
+        "arguments": {
+          "query": "hotel",
+          "resource": "inventory/allowed"
+        },
+        "units": 1
+      }
+    ]
+  }
+}

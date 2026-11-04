@@ -1,0 +1,31 @@
+[package]
+name = "rp23-native"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[features]
+subgroup-audit = ["darlt-spseq-fc/subgroup-audit"]
+
+[dependencies]
+darlt-spseq-fc = { path = "../.." }
+blstrs = "=0.7.1"
+blst = { version = "=0.3.17", features = ["no-threads"] }
+ff = "=0.13.1"
+group = "=0.13.0"
+pairing = "=0.23.0"
+subtle = "=2.6.1"
+rand = "=0.8.8"
+itertools = "=0.10.5"
+digest = "=0.9.0"
+sha2 = "=0.9.9"
+thiserror = "=1.0.38"
+bs58 = "=0.4.0"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

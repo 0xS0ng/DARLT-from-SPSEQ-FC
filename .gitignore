@@ -1,0 +1,17 @@
+**/target*/
+**/__pycache__/
+.DS_Store
+/source-cache/
+/outputs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+*.key
+*.p12

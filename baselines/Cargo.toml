@@ -1,0 +1,18 @@
+[package]
+name = "baseline-core"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+subgroup-audit = []
+
+[dependencies]
+blstrs = "=0.7.1"
+blst = { version = "=0.3.17", features = ["no-threads"] }
+ff = "=0.13.1"
+group = "=0.13.0"
+pairing = "=0.23.0"
+rand = "=0.8.8"
+sha2 = "=0.10.9"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
