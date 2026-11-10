@@ -480,7 +480,12 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
         audit_a = save_panel(fig, ax, "fig12a", values_a)
 
     if "fig12b" in panels:
-        colors = {'booking': "#B8B8B8", 'research': "#5C5C5C"}
+        colors = {
+            "oauth": {"booking": "#C9CDB0", "research": "#77833A"},
+            "sma": {"booking": "#A9D8D2", "research": "#2A9D8F"},
+            "darlt-ablation": {"booking": "#EBCBD3", "research": "#C7798C"},
+            "darlt": {"booking": "#E3B5BC", "research": "#8E1B32"},
+        }
         values_b = [row["server_verification_commit_ns_mean"] / 1e6 for row in replay_statistics]
         low_b = 1
         fig, ax = panel_figure("fig12b")
@@ -489,7 +494,9 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
             position = index + (-.18 if row["workload"] == 'booking' else .18)
             value = row["server_verification_commit_ns_mean"] / 1e6
             patches = ax.bar(position, value - low_b, bottom=low_b, width=.30,
-                             color=colors[row["workload"]], edgecolor="black", linewidth=.4, zorder=3)
+                             color=colors[row["mode"]][row["workload"]],
+                             hatch="////" if row["workload"] == 'booking' else None,
+                             edgecolor="black", linewidth=.4, zorder=3)
             label_bars(ax, patches, [value])
         ax.set_xticks(range(4), [DISPLAY[mode] for mode in MODES],
                       rotation=30, rotation_mode="anchor", ha="right", va="baseline")
@@ -498,9 +505,10 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
                                 ScaledTranslation(0, -4 / 72, fig.dpi_scale_trans))
         ax.set_xlim(-.5, 3.5)
         ylabel(ax, "Server Time (ms)")
-        legend(ax, handles=[Patch(facecolor=colors['booking'], edgecolor="black", linewidth=.4, label="Booking"),
-                            Patch(facecolor=colors['research'], edgecolor="black", linewidth=.4, label="Research")],
-               loc="upper left", ncol=2)
+        legend(ax, handles=[
+            Patch(facecolor="white", edgecolor="black", linewidth=.4, hatch="////", label="Booking"),
+            Patch(facecolor="#5C5C5C", edgecolor="black", linewidth=.4, label="Research"),
+        ], loc="upper left", ncol=2)
         audit_b = save_panel(fig, ax, "fig12b", values_b)
 
     images = [Image.open(out / (name + ".png")).convert("RGB") for name in ("fig12a", "fig12b")]
