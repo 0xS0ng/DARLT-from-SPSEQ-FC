@@ -507,8 +507,8 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
         ylabel(ax, "Server Time (ms)")
         legend(ax, handles=[
             Patch(facecolor="white", edgecolor="black", linewidth=.4, hatch="////", label="Booking"),
-            Patch(facecolor="#5C5C5C", edgecolor="black", linewidth=.4, label="Research"),
-        ], loc="upper left", ncol=2)
+            Patch(facecolor="white", edgecolor="black", linewidth=.4, label="Research"),
+        ], loc="upper left", ncol=2, handlelength=1.2, handleheight=2.1)
         audit_b = save_panel(fig, ax, "fig12b", values_b)
 
     images = [Image.open(out / (name + ".png")).convert("RGB") for name in ("fig12a", "fig12b")]
