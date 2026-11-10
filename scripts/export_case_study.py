@@ -480,6 +480,22 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
         audit_a = save_panel(fig, ax, "fig12a", values_a)
 
     if "fig12b" in panels:
+        from matplotlib.legend_handler import HandlerPatch
+        from matplotlib.patches import PathPatch
+        from matplotlib.path import Path as PlotPath
+        from matplotlib.transforms import Affine2D
+
+        def booking_swatch(legend, orig_handle, xdescent, ydescent, width, height, fontsize):
+            outline = PlotPath.unit_rectangle().transformed(Affine2D().scale(width, height))
+            strokes = []
+            # Preserve the positions of the existing three diagonals.
+            for intercept in (2.166875, .166875, -1.833125):
+                start, end = max(0, -intercept), min(width, height - intercept)
+                if start < end:
+                    strokes.append(PlotPath([(start, start + intercept), (end, end + intercept)]))
+            path = PlotPath.make_compound_path(outline, *strokes)
+            return PathPatch(path.transformed(Affine2D().translate(-xdescent, -ydescent)))
+
         colors = {
             "oauth": {"booking": "#C9CDB0", "research": "#77833A"},
             "sma": {"booking": "#A9D8D2", "research": "#2A9D8F"},
@@ -505,10 +521,11 @@ def plot_figures(root, out, live_statistics, replay_statistics, panels=("fig12a"
                                 ScaledTranslation(0, -4 / 72, fig.dpi_scale_trans))
         ax.set_xlim(-.5, 3.5)
         ylabel(ax, "Server Time (ms)")
+        booking = Patch(facecolor="white", edgecolor="black", linewidth=.4, label="Booking")
         legend(ax, handles=[
-            Patch(facecolor="white", edgecolor="black", linewidth=.4, hatch="/" * 12, label="Booking"),
+            booking,
             Patch(facecolor="white", edgecolor="black", linewidth=.4, label="Research"),
-        ], loc="upper left", ncol=2)
+        ], loc="upper left", ncol=2, handler_map={booking: HandlerPatch(patch_func=booking_swatch)})
         audit_b = save_panel(fig, ax, "fig12b", values_b)
 
     images = [Image.open(out / (name + ".png")).convert("RGB") for name in ("fig12a", "fig12b")]
